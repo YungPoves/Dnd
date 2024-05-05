@@ -48,3 +48,6 @@ Thumbs.db
 *.mov
 *.wmv
 
+DndDice/DndDice/obj/
+DndDice/.vs/
+DndDice/DndDice/bin/

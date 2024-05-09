@@ -1,20 +1,23 @@
-﻿namespace DndDice.Die
-{
-  public class D4 :
-    BaseDice
-  {
-    public D4()
-    {
-      this.Random = new Random();
-    }
+﻿//namespace DndDice.Die
+//{
+//  public class D4 :
+//    BaseDice
+//  {
+//    public static int Roll(int numberOfDice, int modifier)
+//    {
+//      int result = 0;
+//      for (int i = 0; i < numberOfDice; i++)
+//      {
+//        result += BaseDice.Roll(Maximum);
+//      }
+//      return result;
+//    }
 
-    public override int Roll()
-    {
-      this.Result = this.Random.Next(Minimum, Maximum);
-      return this.Result;
-    }
+//    public static string DiceName => DICENAME;
 
-    private const int Minimum = 1;
-    private const int Maximum = 5;
-  }
-}
+//    public static int Maximum => MAXIMUM;
+
+//    private const string DICENAME = nameof(D4);
+//    private const int MAXIMUM = 5;
+//  }
+//}

@@ -8,15 +8,16 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <NoWarn>1701;1702;IDE0002</NoWarn>
+    <NoWarn>1701;1702;IDE0002;CS8601</NoWarn>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <NoWarn>1701;1702;IDE0002</NoWarn>
+    <NoWarn>1701;1702;IDE0002;CS8601</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Include=".Helpers\BaseClass.cs" />
+    <Compile Include=".Helpers\DiceRoller.cs" />
   </ItemGroup>
 
 </Project>

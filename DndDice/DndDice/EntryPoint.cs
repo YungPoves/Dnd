@@ -8,7 +8,6 @@ internal class Program :
   private static void Main()
   {
     int numberOfDice = 5;
-    int modifier = 3;
 
     for (int i = 0; i < numberOfDice; i++)
     {
@@ -20,7 +19,5 @@ internal class Program :
       DiceRoller.D100s.Roll();
       Console.WriteLine();
     }
-
-    RandomNumberGenerator.Create(); 
   }
 }

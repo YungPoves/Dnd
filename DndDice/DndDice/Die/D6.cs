@@ -5,11 +5,10 @@ namespace dnddice.die
   public class D6 :
     BaseDice, IDice
   {
-    public int Roll()
+    public void Roll()
     {
       int result = base.Roll(Maximum);
       Console.WriteLine($"Rolling {DiceName}: {result}");
-      return result;
     }
 
     public override int Maximum => MAXIMUM;

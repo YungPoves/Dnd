@@ -1,17 +1,20 @@
-﻿//namespace DndDice.Die
-//{
-//  public static class D12
-//  {
-//    public static int Roll(int numberOfDice, int modifier)
-//    {
-//      int result = 0;
-//      for (int i = 0; i < numberOfDice; i++)
-//      {
-//        result += BaseDice.Roll(Maximum, modifier);
-//      }
-//      return result;
-//    }
+﻿namespace DndDice.Die
+{
+  public class D12 :
+    BaseDice, IDice
+  {
+    public int Roll()
+    {
+      int result = base.Roll(Maximum);
+      Console.WriteLine($"Rolling {DiceName}: {result}");
+      return result;
+    }
 
-//    private const int Maximum = 13;
-//  }
-//}
+    public override int Maximum => MAXIMUM;
+
+    public override string DiceName => DICENAME;
+
+    private const int MAXIMUM = 13;
+    private const string DICENAME = nameof(D12);
+  }
+}

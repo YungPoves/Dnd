@@ -10,12 +10,12 @@
       return result;
     }
 
-    public override string DiceName => DICENAME;
-
     public override int Maximum => MAXIMUM;
 
-    private const string DICENAME = nameof(D8);
+    public override string DiceName => DICENAME;
+
     private const int MAXIMUM = 9;
+    private const string DICENAME = nameof(D8);
 
   }
 }

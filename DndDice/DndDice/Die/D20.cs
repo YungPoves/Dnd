@@ -14,8 +14,8 @@
 
     public override string DiceName => DICENAME;
 
-    private const string DICENAME = nameof(D20);
     private const int MAXIMUM = 21;
+    private const string DICENAME = nameof(D20);
 
   }
 }

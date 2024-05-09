@@ -1,18 +1,22 @@
-﻿//namespace DndDice.Die
-//{
-//  public static class D6
-//  {
-//    public static int Roll(int numberOfDice)
-//    {
-//      int result = 0;
-//      for (int i = 0; i < numberOfDice; i++) 
-//      {
-//        result += BaseDice.Roll(Minimum, Maximum);
-//      }
-//      return result;
-//    }
+﻿using DndDice.Die;
 
-//    private const int Minimum = 1;
-//    private const int Maximum = 7;
-//  }
-//}
+namespace dnddice.die
+{
+  public class D6 :
+    BaseDice, IDice
+  {
+    public int Roll()
+    {
+      int result = base.Roll(Maximum);
+      Console.WriteLine($"Rolling {DiceName}: {result}");
+      return result;
+    }
+
+    public override int Maximum => MAXIMUM;
+
+    public override string DiceName => DICENAME;
+
+    private const int MAXIMUM = 7;
+    private const string DICENAME = nameof(D6);
+  }
+}

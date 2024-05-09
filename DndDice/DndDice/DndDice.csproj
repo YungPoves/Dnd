@@ -17,8 +17,6 @@
 
   <ItemGroup>
     <Compile Include=".Helpers\BaseClass.cs" />
-    <Compile Include=".Helpers\DiceHelpers.cs" />
-    <Compile Include=".Helpers\DiceHelperBase.cs" />
   </ItemGroup>
 
 </Project>

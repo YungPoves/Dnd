@@ -1,6 +1,6 @@
 ﻿namespace DndDice.Die
 {
-  public class D4 :
+  public class D100 :
     BaseDice, IDice
   {
     public int Roll()
@@ -14,7 +14,7 @@
 
     public override string DiceName => DICENAME;
 
-    private const int MAXIMUM = 5;
-    private const string DICENAME = nameof(D4);
+    private const int MAXIMUM = 101;
+    private const string DICENAME = nameof(D100);
   }
 }

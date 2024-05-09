@@ -1,6 +1,6 @@
 ﻿using DndDice;
-using DndDice.Die;
 using DndDice.Helpers;
+using System.Security.Cryptography;
 
 internal class Program :
   BaseClass
@@ -10,11 +10,16 @@ internal class Program :
     int numberOfDice = 6;
     int modifier = 5;
 
-    for (int i = 0; i < numberOfDice; i++) 
+    for (int i = 0; i < numberOfDice; i++)
     {
+      DiceRoller.D4s.Roll();
       DiceRoller.D8s.Roll();
       DiceRoller.D20s.Roll();
+      DiceRoller.D100s.Roll();
+      Console.WriteLine();
     }
+
+    RandomNumberGenerator.Create();
 
     //Console.WriteLine($"Rolling {x} D6's: {D6.Roll(x)}");
 

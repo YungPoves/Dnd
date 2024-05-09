@@ -8,8 +8,10 @@ namespace DndDice
     {
     }
 
+    public D4 D4s => Helper<D4>();
     public D8 D8s => Helper<D8>();
     public D20 D20s => Helper<D20>();
+    public D100 D100s => Helper<D100>();
 
     private TDiceType Helper<TDiceType>() where TDiceType : BaseDice
     {
@@ -21,13 +23,7 @@ namespace DndDice
       return (TDiceType)dieByType[helperType];
     }
 
-    //public static void Roll(BaseDice dice)
-    //{
-    //  Console.WriteLine($"Roll {dice.DiceName}");
-    //  BaseDice.RollWithModifiers(dice.GetMaximum(), 5);
-    //}
-
-    public static int RollAttack(int modifier)
+public static int RollAttack(int modifier)
     {
       int roll = Random.Next(Minimum, 21);
 

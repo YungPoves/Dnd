@@ -7,16 +7,16 @@
       random = new Random();
     }
 
-    public static int Roll(int max)
+    public static int Roll(int numberOfSides)
     {
-      BaseDice.Result = BaseDice.Random.Next(Minimum, max);
+      BaseDice.Result = BaseDice.Random.Next(Minimum, numberOfSides);
 
       return BaseDice.Result;
     }
 
-    public int RollWithModifiers(int max, int modifier)
+    public int RollWithModifiers(int numberOfSides, int modifier)
     {
-      int rollResult = Roll(max);
+      int rollResult = Roll(numberOfSides);
       if (rollResult == 1)
       {
         Console.WriteLine($"{rollResult}! Critical fail.");
@@ -28,12 +28,12 @@
       return rollResult;
     }
 
-    public virtual int GetMaximum()
+    public virtual int GetNumberOfSides()
     {
-      return Maximum;
+      return NumberOfSides;
     }
 
-    public abstract int Maximum { get; }
+    public abstract int NumberOfSides { get; }
     public abstract string DiceName { get; }
 
     public static int Result

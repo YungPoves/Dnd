@@ -5,7 +5,7 @@
   {
     public void Roll()
     {
-      int result = Roll(Maximum);
+      int result = Roll(NumberOfSides);
 
       switch (result)
       {
@@ -21,11 +21,11 @@
       }
     }
 
-    public override int Maximum => MAXIMUM;
+    public override int NumberOfSides => NUMBER_OF_SIDES;
 
     public override string DiceName => DICENAME;
 
-    private const int MAXIMUM = 21;
+    private const int NUMBER_OF_SIDES = 21;
     private const string DICENAME = nameof(D20);
 
   }

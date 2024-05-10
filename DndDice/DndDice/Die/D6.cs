@@ -7,15 +7,15 @@ namespace dnddice.die
   {
     public void Roll()
     {
-      int result = Roll(Maximum);
+      int result = Roll(NumberOfSides);
       Console.WriteLine($"Rolling {DiceName}: {result}");
     }
 
-    public override int Maximum => MAXIMUM;
+    public override int NumberOfSides => NUMBER_OF_SIDES;
 
     public override string DiceName => DICENAME;
 
-    private const int MAXIMUM = 7;
+    private const int NUMBER_OF_SIDES = 7;
     private const string DICENAME = nameof(D6);
   }
 }

@@ -7,7 +7,7 @@ namespace dnddice.die
   {
     public void Roll()
     {
-      int result = base.Roll(Maximum);
+      int result = Roll(Maximum);
       Console.WriteLine($"Rolling {DiceName}: {result}");
     }
 

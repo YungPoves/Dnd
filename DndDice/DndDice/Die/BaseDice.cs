@@ -7,7 +7,7 @@
       random = new Random();
     }
 
-    public int Roll(int max)
+    public static int Roll(int max)
     {
       BaseDice.Result = BaseDice.Random.Next(Minimum, max);
 

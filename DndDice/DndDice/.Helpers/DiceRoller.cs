@@ -15,6 +15,8 @@ namespace DndDice
 
     public D8 D8s => Helper<D8>();
 
+    public D10 D10s => Helper<D10>();
+
     public D12 D12s => Helper<D12>();
 
     public D20 D20s => Helper<D20>();

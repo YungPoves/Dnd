@@ -14,6 +14,7 @@ internal class Program :
       DiceRoller.D4s.Roll();
       DiceRoller.D6s.Roll();
       DiceRoller.D8s.Roll();
+      DiceRoller.D10s.Roll();
       DiceRoller.D12s.Roll();
       DiceRoller.D20s.Roll();
       DiceRoller.D100s.Roll();

@@ -6,7 +6,19 @@
     public void Roll()
     {
       int result = Roll(Maximum);
-      Console.WriteLine($"Rolling {DiceName}: {result}");
+
+      switch (result)
+      {
+        case 1:
+          Console.WriteLine($"{result}: Critical fail.");
+          break;
+        case 20:
+          Console.WriteLine($"{result}: Critical success.");
+          break;
+        default:
+          Console.WriteLine($"Rolling {DiceName}: {result}");
+          break;
+      }
     }
 
     public override int Maximum => MAXIMUM;

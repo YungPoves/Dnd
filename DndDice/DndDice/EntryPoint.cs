@@ -19,5 +19,10 @@ internal class Program :
       DiceRoller.D100s.Roll();
       Console.WriteLine();
     }
+
+    for (int i = 0; i < 10; i++) 
+    {
+      DiceRoller.D20s.Roll();
+    }
   }
 }

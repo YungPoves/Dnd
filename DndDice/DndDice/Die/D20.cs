@@ -3,6 +3,12 @@
   public class D20 :
       BaseDice, IDice
   {
+    public D20()
+    {
+      this.NumberOfSides = NUMBER_OF_SIDES;
+      this.DiceName = DICENAME;
+    }
+
     public void Roll()
     {
       int result = Roll(NumberOfSides);
@@ -21,12 +27,7 @@
       }
     }
 
-    public override int NumberOfSides => NUMBER_OF_SIDES;
-
-    public override string DiceName => DICENAME;
-
     private const int NUMBER_OF_SIDES = 21;
     private const string DICENAME = nameof(D20);
-
   }
 }

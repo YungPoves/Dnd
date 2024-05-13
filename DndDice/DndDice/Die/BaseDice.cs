@@ -33,8 +33,8 @@
       return NumberOfSides;
     }
 
-    public abstract int NumberOfSides { get; }
-    public abstract string DiceName { get; }
+    public virtual int NumberOfSides { get; set; }
+    public virtual string? DiceName { get; set; }
 
     public static int Result
     {

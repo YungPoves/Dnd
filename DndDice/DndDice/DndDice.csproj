@@ -8,11 +8,11 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <NoWarn>1701;1702;IDE0002;CS8601</NoWarn>
+    <NoWarn>1701;1702;IDE0002;CS8601;IDE0060;IDE0003</NoWarn>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <NoWarn>1701;1702;IDE0002;CS8601</NoWarn>
+    <NoWarn>1701;1702;IDE0002;CS8601;IDE0060;IDE0003</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>

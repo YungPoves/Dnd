@@ -2,6 +2,7 @@
 {
   public abstract class BaseDice
   {
+    #region ctor
     protected BaseDice() : this(NumberOfSides, DiceName)
     {
     }
@@ -11,7 +12,8 @@
       NumberOfSides = numberOfSides;
       DiceName = diceName;
       Random = new Random();
-    }
+    } 
+    #endregion
 
     public static int Roll(int numberOfSides)
     {
@@ -20,27 +22,9 @@
       return BaseDice.Result;
     }
 
-    public int RollWithModifiers(int numberOfSides, int modifier)
-    {
-      int rollResult = Roll(numberOfSides);
-      if (rollResult == 1)
-      {
-        Console.WriteLine($"{rollResult}! Critical fail.");
-        return rollResult;
-      }
-      else rollResult += + modifier;
-      Console.WriteLine($"Roll({BaseDice.Result}) + Modifier({modifier}) = {BaseDice.Result + modifier}");
-
-      return rollResult;
-    }
-
-    public virtual int GetNumberOfSides()
-    {
-      return NumberOfSides;
-    }
-
     private const int Minimum = 1;
 
+    #region Properties
     public static int Result
     {
       get => result;
@@ -56,21 +40,24 @@
       set => random = value;
     }
 
-    public static int NumberOfSides 
+    public static int NumberOfSides
     {
       get => numberOfSides;
       set => numberOfSides = value;
     }
-    public static string? DiceName 
+    public static string? DiceName
     {
       get => diceName;
       set => diceName = value;
     }
+    #endregion
 
+    #region Fields
     private static int numberOfSides;
     private static string? diceName;
 
     private static Random? random;
     private static int result;
+    #endregion
   }
 }

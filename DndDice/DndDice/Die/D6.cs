@@ -1,14 +1,10 @@
-﻿using DndDice.Die;
-
-namespace dnddice.die
+﻿namespace DndDice.Die
 {
   public class D6 :
     BaseDice, IDice
   {
-    public D6()
+    public D6() : base(NUMBER_OF_SIDES, DICENAME)
     {
-      this.NumberOfSides = NUMBER_OF_SIDES;
-      this.DiceName = DICENAME;
     }
 
     public void Roll()

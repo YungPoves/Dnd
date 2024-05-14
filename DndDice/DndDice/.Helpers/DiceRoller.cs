@@ -1,5 +1,4 @@
-﻿using dnddice.die;
-using DndDice.Die;
+﻿using DndDice.Die;
 
 namespace DndDice
 {

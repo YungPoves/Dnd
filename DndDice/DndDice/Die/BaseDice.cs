@@ -2,9 +2,15 @@
 {
   public abstract class BaseDice
   {
-    protected BaseDice()
+    protected BaseDice() : this(NumberOfSides, DiceName)
     {
-      random = new Random();
+    }
+
+    protected BaseDice(int numberOfSides, string? diceName)
+    {
+      NumberOfSides = numberOfSides;
+      DiceName = diceName;
+      Random = new Random();
     }
 
     public static int Roll(int numberOfSides)
@@ -33,8 +39,7 @@
       return NumberOfSides;
     }
 
-    public virtual int NumberOfSides { get; set; }
-    public virtual string? DiceName { get; set; }
+    private const int Minimum = 1;
 
     public static int Result
     {
@@ -51,7 +56,19 @@
       set => random = value;
     }
 
-    private const int Minimum = 1;
+    public static int NumberOfSides 
+    {
+      get => numberOfSides;
+      set => numberOfSides = value;
+    }
+    public static string? DiceName 
+    {
+      get => diceName;
+      set => diceName = value;
+    }
+
+    private static int numberOfSides;
+    private static string? diceName;
 
     private static Random? random;
     private static int result;

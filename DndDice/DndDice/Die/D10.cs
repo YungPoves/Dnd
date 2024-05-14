@@ -3,11 +3,10 @@
   public class D10 :
     BaseDice, IDice
   {
-    public D10()
+    public D10() : base(NUMBER_OF_SIDES, DICENAME)
     {
-      this.NumberOfSides = NUMBER_OF_SIDES;
-      this.DiceName = DICENAME;
     }
+
     public void Roll()
     {
       int result = Roll(NumberOfSides);

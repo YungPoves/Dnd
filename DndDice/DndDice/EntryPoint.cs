@@ -1,6 +1,5 @@
 ﻿using DndDice;
 using DndDice.Helpers;
-using System.Security.Cryptography;
 
 internal class Program :
   BaseClass
@@ -21,9 +20,9 @@ internal class Program :
       Console.WriteLine();
     }
 
-    for (int i = 0; i < 10; i++) 
-    {
-      DiceRoller.D20s.Roll();
-    }
+    //for (int i = 0; i < 10; i++) 
+    //{
+    //  DiceRoller.D20s.Roll();
+    //}
   }
 }

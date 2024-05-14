@@ -3,7 +3,7 @@
   public abstract class BaseDice
   {
     #region ctor
-    protected BaseDice() : this(NumberOfSides, DiceName)
+    protected BaseDice()
     {
     }
 
@@ -40,12 +40,12 @@
       set => random = value;
     }
 
-    public static int NumberOfSides
+    public int NumberOfSides
     {
       get => numberOfSides;
       set => numberOfSides = value;
     }
-    public static string? DiceName
+    public string? DiceName
     {
       get => diceName;
       set => diceName = value;
@@ -53,8 +53,8 @@
     #endregion
 
     #region Fields
-    private static int numberOfSides;
-    private static string? diceName;
+    private int numberOfSides;
+    private string? diceName;
 
     private static Random? random;
     private static int result;

@@ -14,10 +14,10 @@
       switch (result)
       {
         case 1:
-          Console.WriteLine($"{result}: Critical fail.");
+          Console.WriteLine($"Rolling {DiceName}: {result}: Critical fail.");
           break;
         case 20:
-          Console.WriteLine($"{result}: Critical success.");
+          Console.WriteLine($"Rolling {DiceName}: {result}: Critical success.");
           break;
         default:
           Console.WriteLine($"Rolling {DiceName}: {result}");

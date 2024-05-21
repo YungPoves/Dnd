@@ -7,10 +7,12 @@
     {
     }
 
-    public void Roll()
+    public int Roll()
     {
       int result = Roll(NumberOfSides);
-      Console.WriteLine($"Rolling {DiceName}: {result}");
+      //Console.WriteLine($"Rolling {DiceName}: {result}");
+
+      return result;
     }
 
     private const int NUMBER_OF_SIDES = 9;

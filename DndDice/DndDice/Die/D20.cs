@@ -7,22 +7,23 @@
     {
     }
 
-    public void Roll()
+    public int Roll()
     {
       int result = Roll(NumberOfSides);
 
       switch (result)
       {
         case 1:
-          Console.WriteLine($"Rolling {DiceName}: {result}: Critical fail.");
+          //Console.WriteLine($"Rolling {DiceName}: {result}: Critical fail.");
           break;
         case 20:
-          Console.WriteLine($"Rolling {DiceName}: {result}: Critical success.");
+          //Console.WriteLine($"Rolling {DiceName}: {result}: Critical success.");
           break;
         default:
-          Console.WriteLine($"Rolling {DiceName}: {result}");
+          //Console.WriteLine($"Rolling {DiceName}: {result}");
           break;
       }
+      return result;
     }
 
     private const int NUMBER_OF_SIDES = 21;

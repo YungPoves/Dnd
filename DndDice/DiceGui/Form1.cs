@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DiceProject.Die;
+using Die;
 
 namespace DiceGui
 {
@@ -16,5 +18,23 @@ namespace DiceGui
     {
       InitializeComponent();
     }
+
+    public Form1(DiceViewModel viewModel)
+    {
+      InitializeComponent();
+      this.viewModel = viewModel;
+    }
+
+    private void ButtonD4_Click(object sender, EventArgs e)
+    {
+      textBoxD4.Text = viewModel.D4();
+    }
+
+    private void ButtonD6_Click(object sender, EventArgs e)
+    {
+      textBoxD6.Text = viewModel.D6();
+    }
+
+    private readonly DiceViewModel viewModel;
   }
 }

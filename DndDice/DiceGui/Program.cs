@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Die;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,11 @@ namespace DiceGui
     {
       Application.EnableVisualStyles();
       Application.SetCompatibleTextRenderingDefault(false);
-      Application.Run(new Form1());
+
+      DiceViewModel viewModel = new DiceViewModel();
+      Form1 form = new Form1(viewModel);
+
+      Application.Run(form);
     }
   }
 }

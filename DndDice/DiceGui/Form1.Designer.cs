@@ -31,59 +31,138 @@ namespace DiceGui
     /// </summary>
     private void InitializeComponent()
     {
+      this.components = new System.ComponentModel.Container();
       this.buttonD6 = new System.Windows.Forms.Button();
-      this.textBoxD4 = new System.Windows.Forms.TextBox();
       this.buttonD4 = new System.Windows.Forms.Button();
-      this.textBoxD6 = new System.Windows.Forms.TextBox();
+      this.buttonD8 = new System.Windows.Forms.Button();
+      this.mainMenu = new System.Windows.Forms.MainMenu(this.components);
+      this.menuItem1 = new System.Windows.Forms.MenuItem();
+      this.txtMessageLog = new System.Windows.Forms.TextBox();
+      this.lblTextLog = new System.Windows.Forms.Label();
+      this.buttonD10 = new System.Windows.Forms.Button();
+      this.buttonD100 = new System.Windows.Forms.Button();
+      this.buttonD12 = new System.Windows.Forms.Button();
+      this.buttonD20 = new System.Windows.Forms.Button();
       this.SuspendLayout();
       // 
       // buttonD6
       // 
-      this.buttonD6.Location = new System.Drawing.Point(254, 12);
+      this.buttonD6.Location = new System.Drawing.Point(12, 71);
       this.buttonD6.Name = "buttonD6";
-      this.buttonD6.Size = new System.Drawing.Size(213, 78);
-      this.buttonD6.TabIndex = 0;
+      this.buttonD6.Size = new System.Drawing.Size(123, 38);
+      this.buttonD6.TabIndex = 1;
       this.buttonD6.Text = "D6";
       this.buttonD6.UseVisualStyleBackColor = true;
       this.buttonD6.Click += new System.EventHandler(this.ButtonD6_Click);
       // 
-      // textBoxD4
-      // 
-      this.textBoxD4.Enabled = false;
-      this.textBoxD4.Location = new System.Drawing.Point(12, 98);
-      this.textBoxD4.Name = "textBoxD4";
-      this.textBoxD4.Size = new System.Drawing.Size(213, 22);
-      this.textBoxD4.TabIndex = 2;
-      // 
       // buttonD4
       // 
-      this.buttonD4.Location = new System.Drawing.Point(12, 12);
+      this.buttonD4.Location = new System.Drawing.Point(12, 27);
       this.buttonD4.Name = "buttonD4";
-      this.buttonD4.Size = new System.Drawing.Size(213, 78);
-      this.buttonD4.TabIndex = 3;
+      this.buttonD4.Size = new System.Drawing.Size(123, 38);
+      this.buttonD4.TabIndex = 0;
       this.buttonD4.Text = "D4";
       this.buttonD4.UseVisualStyleBackColor = true;
       this.buttonD4.Click += new System.EventHandler(this.ButtonD4_Click);
       // 
-      // textBoxD6
+      // buttonD8
       // 
-      this.textBoxD6.Location = new System.Drawing.Point(254, 98);
-      this.textBoxD6.Name = "textBoxD6";
-      this.textBoxD6.Size = new System.Drawing.Size(213, 22);
-      this.textBoxD6.TabIndex = 4;
+      this.buttonD8.Location = new System.Drawing.Point(12, 116);
+      this.buttonD8.Name = "buttonD8";
+      this.buttonD8.Size = new System.Drawing.Size(123, 38);
+      this.buttonD8.TabIndex = 2;
+      this.buttonD8.Text = "D8";
+      this.buttonD8.UseVisualStyleBackColor = true;
+      this.buttonD8.Click += new System.EventHandler(this.ButtonD8_Click);
+      // 
+      // mainMenu
+      // 
+      this.mainMenu.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.menuItem1});
+      // 
+      // menuItem1
+      // 
+      this.menuItem1.Index = 0;
+      this.menuItem1.Text = "File";
+      // 
+      // txtMessageLog
+      // 
+      this.txtMessageLog.Enabled = false;
+      this.txtMessageLog.Location = new System.Drawing.Point(170, 27);
+      this.txtMessageLog.Multiline = true;
+      this.txtMessageLog.Name = "txtMessageLog";
+      this.txtMessageLog.Size = new System.Drawing.Size(258, 372);
+      this.txtMessageLog.TabIndex = 7;
+      // 
+      // lblTextLog
+      // 
+      this.lblTextLog.AutoSize = true;
+      this.lblTextLog.BackColor = System.Drawing.Color.Transparent;
+      this.lblTextLog.Location = new System.Drawing.Point(167, 8);
+      this.lblTextLog.Name = "lblTextLog";
+      this.lblTextLog.Size = new System.Drawing.Size(62, 16);
+      this.lblTextLog.TabIndex = 8;
+      this.lblTextLog.Text = "Text Log:";
+      // 
+      // buttonD10
+      // 
+      this.buttonD10.Location = new System.Drawing.Point(12, 160);
+      this.buttonD10.Name = "buttonD10";
+      this.buttonD10.Size = new System.Drawing.Size(123, 38);
+      this.buttonD10.TabIndex = 9;
+      this.buttonD10.Text = "D10";
+      this.buttonD10.UseVisualStyleBackColor = true;
+      this.buttonD10.Click += new System.EventHandler(this.ButtonD10_Click);
+      // 
+      // buttonD100
+      // 
+      this.buttonD100.Location = new System.Drawing.Point(12, 292);
+      this.buttonD100.Name = "buttonD100";
+      this.buttonD100.Size = new System.Drawing.Size(123, 38);
+      this.buttonD100.TabIndex = 10;
+      this.buttonD100.Text = "D100";
+      this.buttonD100.UseVisualStyleBackColor = true;
+      this.buttonD100.Click += new System.EventHandler(this.ButtonD100_Click);
+      // 
+      // buttonD12
+      // 
+      this.buttonD12.Location = new System.Drawing.Point(12, 204);
+      this.buttonD12.Name = "buttonD12";
+      this.buttonD12.Size = new System.Drawing.Size(123, 38);
+      this.buttonD12.TabIndex = 11;
+      this.buttonD12.Text = "D12";
+      this.buttonD12.UseVisualStyleBackColor = true;
+      this.buttonD12.Click += new System.EventHandler(this.ButtonD12_Click);
+      // 
+      // buttonD20
+      // 
+      this.buttonD20.Location = new System.Drawing.Point(12, 248);
+      this.buttonD20.Name = "buttonD20";
+      this.buttonD20.Size = new System.Drawing.Size(123, 38);
+      this.buttonD20.TabIndex = 12;
+      this.buttonD20.Text = "D20";
+      this.buttonD20.UseVisualStyleBackColor = true;
+      this.buttonD20.Click += new System.EventHandler(this.ButtonD20_Click);
       // 
       // Form1
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.BackColor = System.Drawing.Color.DarkViolet;
-      this.ClientSize = new System.Drawing.Size(779, 422);
-      this.Controls.Add(this.textBoxD6);
+      this.BackColor = System.Drawing.Color.Gray;
+      this.ClientSize = new System.Drawing.Size(780, 422);
+      this.Controls.Add(this.buttonD20);
+      this.Controls.Add(this.buttonD12);
+      this.Controls.Add(this.buttonD100);
+      this.Controls.Add(this.buttonD10);
+      this.Controls.Add(this.lblTextLog);
+      this.Controls.Add(this.txtMessageLog);
       this.Controls.Add(this.buttonD4);
-      this.Controls.Add(this.textBoxD4);
       this.Controls.Add(this.buttonD6);
+      this.Controls.Add(this.buttonD8);
+      this.MaximizeBox = false;
+      this.Menu = this.mainMenu;
       this.Name = "Form1";
-      this.Text = " ";
+      this.Text = "Dice Roller";
       this.ResumeLayout(false);
       this.PerformLayout();
 
@@ -91,10 +170,18 @@ namespace DiceGui
 
     #endregion
 
-    private System.Windows.Forms.Button buttonD6;
-    private System.Windows.Forms.TextBox textBoxD4;
     private System.Windows.Forms.Button buttonD4;
-    private System.Windows.Forms.TextBox textBoxD6;
+    private System.Windows.Forms.Button buttonD6;
+    private System.Windows.Forms.Button buttonD8;
+
+    private System.Windows.Forms.MainMenu mainMenu;
+    private System.Windows.Forms.MenuItem menuItem1;
+    private System.Windows.Forms.TextBox txtMessageLog;
+    private System.Windows.Forms.Label lblTextLog;
+    private System.Windows.Forms.Button buttonD10;
+    private System.Windows.Forms.Button buttonD100;
+    private System.Windows.Forms.Button buttonD12;
+    private System.Windows.Forms.Button buttonD20;
   }
 }
 

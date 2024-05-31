@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DiceProject.Die;
 using Die;
 
 namespace DiceGui
@@ -27,12 +19,37 @@ namespace DiceGui
 
     private void ButtonD4_Click(object sender, EventArgs e)
     {
-      textBoxD4.Text = viewModel.D4();
+      txtMessageLog.AppendText($"{viewModel.D4()}{Environment.NewLine}");
     }
-
     private void ButtonD6_Click(object sender, EventArgs e)
     {
-      textBoxD6.Text = viewModel.D6();
+      txtMessageLog.AppendText($"{viewModel.D6()}{Environment.NewLine}");
+    }
+    private void ButtonD8_Click(object sender, EventArgs e)
+    {
+      txtMessageLog.AppendText($"{viewModel.D8()}{Environment.NewLine}");
+    }
+    private void ButtonD10_Click(object sender, EventArgs e)
+    {
+      txtMessageLog.AppendText($"{viewModel.D10()}{Environment.NewLine}");
+    }
+    private void ButtonD12_Click(object sender, EventArgs e)
+    {
+      txtMessageLog.AppendText($"{viewModel.D12()}{Environment.NewLine}");
+    }
+    private void ButtonD20_Click(object sender, EventArgs e)
+    {
+      txtMessageLog.AppendText($"{viewModel.D20()}{Environment.NewLine}");
+    }
+    private void ButtonD100_Click(object sender, EventArgs e)
+    {
+      txtMessageLog.AppendText($"{viewModel.D100()}{Environment.NewLine}");
+    }
+
+
+    private void FileMenuItemExit_Click(object sender, EventArgs e)
+    {
+      Close();
     }
 
     private readonly DiceViewModel viewModel;

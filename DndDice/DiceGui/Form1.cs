@@ -46,6 +46,10 @@ namespace DiceGui
       txtMessageLog.AppendText($"{viewModel.D100()}{Environment.NewLine}");
     }
 
+    private void ButtonClearTextLog_Click(object sender, EventArgs e)
+    {
+      txtMessageLog.Clear();
+    }
 
     private void FileMenuItemExit_Click(object sender, EventArgs e)
     {

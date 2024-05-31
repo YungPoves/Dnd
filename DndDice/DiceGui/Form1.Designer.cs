@@ -35,14 +35,16 @@ namespace DiceGui
       this.buttonD6 = new System.Windows.Forms.Button();
       this.buttonD4 = new System.Windows.Forms.Button();
       this.buttonD8 = new System.Windows.Forms.Button();
-      this.mainMenu = new System.Windows.Forms.MainMenu(this.components);
-      this.menuItem1 = new System.Windows.Forms.MenuItem();
-      this.txtMessageLog = new System.Windows.Forms.TextBox();
-      this.lblTextLog = new System.Windows.Forms.Label();
       this.buttonD10 = new System.Windows.Forms.Button();
-      this.buttonD100 = new System.Windows.Forms.Button();
       this.buttonD12 = new System.Windows.Forms.Button();
       this.buttonD20 = new System.Windows.Forms.Button();
+      this.buttonD100 = new System.Windows.Forms.Button();
+      this.mainMenu = new System.Windows.Forms.MainMenu(this.components);
+      this.menuItemFileGroup = new System.Windows.Forms.MenuItem();
+      this.fileMenuItemExit = new System.Windows.Forms.MenuItem();
+      this.txtMessageLog = new System.Windows.Forms.TextBox();
+      this.lblTextLog = new System.Windows.Forms.Label();
+      this.buttonClearTextLog = new System.Windows.Forms.Button();
       this.SuspendLayout();
       // 
       // buttonD6
@@ -78,12 +80,20 @@ namespace DiceGui
       // mainMenu
       // 
       this.mainMenu.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-            this.menuItem1});
+            this.menuItemFileGroup});
       // 
-      // menuItem1
+      // menuItemFileGroup
       // 
-      this.menuItem1.Index = 0;
-      this.menuItem1.Text = "File";
+      this.menuItemFileGroup.Index = 0;
+      this.menuItemFileGroup.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.fileMenuItemExit});
+      this.menuItemFileGroup.Text = "File";
+      // 
+      // fileMenuItemExit
+      // 
+      this.fileMenuItemExit.Index = 0;
+      this.fileMenuItemExit.Text = "Exit";
+      this.fileMenuItemExit.Click += new System.EventHandler(this.FileMenuItemExit_Click);
       // 
       // txtMessageLog
       // 
@@ -144,12 +154,23 @@ namespace DiceGui
       this.buttonD20.UseVisualStyleBackColor = true;
       this.buttonD20.Click += new System.EventHandler(this.ButtonD20_Click);
       // 
+      // buttonClearTextLog
+      // 
+      this.buttonClearTextLog.Location = new System.Drawing.Point(434, 363);
+      this.buttonClearTextLog.Name = "buttonClearTextLog";
+      this.buttonClearTextLog.Size = new System.Drawing.Size(95, 36);
+      this.buttonClearTextLog.TabIndex = 13;
+      this.buttonClearTextLog.Text = "Clear";
+      this.buttonClearTextLog.UseVisualStyleBackColor = true;
+      this.buttonClearTextLog.Click += new System.EventHandler(this.ButtonClearTextLog_Click);
+      // 
       // Form1
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.BackColor = System.Drawing.Color.Gray;
       this.ClientSize = new System.Drawing.Size(780, 422);
+      this.Controls.Add(this.buttonClearTextLog);
       this.Controls.Add(this.buttonD20);
       this.Controls.Add(this.buttonD12);
       this.Controls.Add(this.buttonD100);
@@ -173,15 +194,18 @@ namespace DiceGui
     private System.Windows.Forms.Button buttonD4;
     private System.Windows.Forms.Button buttonD6;
     private System.Windows.Forms.Button buttonD8;
-
-    private System.Windows.Forms.MainMenu mainMenu;
-    private System.Windows.Forms.MenuItem menuItem1;
-    private System.Windows.Forms.TextBox txtMessageLog;
-    private System.Windows.Forms.Label lblTextLog;
     private System.Windows.Forms.Button buttonD10;
-    private System.Windows.Forms.Button buttonD100;
     private System.Windows.Forms.Button buttonD12;
     private System.Windows.Forms.Button buttonD20;
+    private System.Windows.Forms.Button buttonD100;
+
+    private System.Windows.Forms.MainMenu mainMenu;
+    private System.Windows.Forms.MenuItem[] fileMenuItems;
+    private System.Windows.Forms.MenuItem menuItemFileGroup;
+    private System.Windows.Forms.MenuItem fileMenuItemExit;
+    private System.Windows.Forms.TextBox txtMessageLog;
+    private System.Windows.Forms.Label lblTextLog;
+    private System.Windows.Forms.Button buttonClearTextLog;
   }
 }
 

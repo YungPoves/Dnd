@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiceGui", "DiceGui\DiceGui.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiceProject", "ClassLibrary1\DiceProject.csproj", "{57978DC7-6965-4ABD-AFE1-D87E326CA5F8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DndCharacters", "DndCharacters\DndCharacters.csproj", "{23619C4F-6A16-431A-A33C-C4D992853662}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{57978DC7-6965-4ABD-AFE1-D87E326CA5F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57978DC7-6965-4ABD-AFE1-D87E326CA5F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57978DC7-6965-4ABD-AFE1-D87E326CA5F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23619C4F-6A16-431A-A33C-C4D992853662}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23619C4F-6A16-431A-A33C-C4D992853662}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23619C4F-6A16-431A-A33C-C4D992853662}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23619C4F-6A16-431A-A33C-C4D992853662}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

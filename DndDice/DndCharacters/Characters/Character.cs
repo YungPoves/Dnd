@@ -44,7 +44,7 @@ namespace Characters
       {
         if (value < MinHealth || value > MaxHealth)
         {
-          Console.WriteLine($"Healthpoints for {this.Name} must be between {MinHealth} and {MaxHealth}.\n");
+          //Console.WriteLine($"Healthpoints for {this.Name} must be between {MinHealth} and {MaxHealth}.\n");
         }
         else healthPoints = value;
       }
@@ -56,7 +56,7 @@ namespace Characters
       {
         if (value < MinLevel || value > MaxLevel)
         {
-          Console.WriteLine($"The level for character {this.Name} must be between {MinLevel} and {MaxLevel}.\n");
+          //Console.WriteLine($"The level for character {this.Name} must be between {MinLevel} and {MaxLevel}.\n");
           this.Level = DefaultLevel;
         }
         else level = value;
@@ -75,7 +75,7 @@ namespace Characters
         else
         {
           name = DefaultName;
-          Console.WriteLine("Character name cannot be empty.");
+          //Console.WriteLine("Character name cannot be empty.");
         }
       }
     }

@@ -1,4 +1,6 @@
-﻿namespace MagicDestroyers.Equipment.Weapons.Sharp
+﻿using System;
+
+namespace MagicDestroyers.Equipment.Weapons.Sharp
 {
   public class Sword : Weapon
   {

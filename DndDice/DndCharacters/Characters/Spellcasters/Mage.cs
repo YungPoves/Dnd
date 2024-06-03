@@ -4,6 +4,7 @@ using MagicDestroyers.Constants;
 using MagicDestroyers.Equipment.Armors.Light;
 using MagicDestroyers.Equipment.Weapons.Blunt;
 using Spells;
+using System;
 
 namespace Characters
 {
@@ -38,13 +39,13 @@ namespace Characters
 
       if (ManaCost > this.SpellPoints)
       {
-        Console.WriteLine($"{this.Name} does not have enough spell points to use {nameof(ArcaneWrath)}");
+        //Console.WriteLine($"{this.Name} does not have enough spell points to use {nameof(ArcaneWrath)}");
         
         return 0;
       }
       else
       {
-        Console.WriteLine($"{this.Name} casts {nameof(ArcaneWrath)}!");
+        //Console.WriteLine($"{this.Name} casts {nameof(ArcaneWrath)}!");
         this.SpellPoints -= ManaCost;
 
         return this.Weapon.Damage + 15;
@@ -57,13 +58,13 @@ namespace Characters
 
       if (ManaCost > this.SpellPoints)
       {
-        Console.WriteLine($"{this.Name} does not have enough spell points to use {nameof(Firewall)}");
+        //Console.WriteLine($"{this.Name} does not have enough spell points to use {nameof(Firewall)}");
 
         return 0;
       }
       else
       {
-        Console.WriteLine($"{this.Name} casts {nameof(Firewall)}!");
+        //Console.WriteLine($"{this.Name} casts {nameof(Firewall)}!");
         this.SpellPoints -= ManaCost;
 
         return this.Weapon.Damage + 50;

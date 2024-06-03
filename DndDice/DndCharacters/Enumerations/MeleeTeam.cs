@@ -1,6 +1,7 @@
 ﻿using Characters;
 using MagicDestroyers.Characters.Melee;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace MagicDestroyers.Enumerations
 {

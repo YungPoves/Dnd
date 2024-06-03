@@ -30,7 +30,7 @@ namespace MagicDestroyers.Characters.Spellcasters
       {
         if (value < MinSpellPoints || value > MaxSpellPoints)
         {
-          Console.WriteLine($"The spell points for character {Name} must be between {MinSpellPoints} and {MaxSpellPoints}.\n");
+          //Console.WriteLine($"The spell points for character {Name} must be between {MinSpellPoints} and {MaxSpellPoints}.\n");
           spellPoints = DefaultSpellPoints;
         }
         else

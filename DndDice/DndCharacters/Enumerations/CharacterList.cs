@@ -1,4 +1,5 @@
 ﻿using Characters;
+using System.Collections.Generic;
 
 namespace MagicDestroyers.Enumerations
 {

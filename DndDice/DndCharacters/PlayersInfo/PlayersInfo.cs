@@ -1,4 +1,6 @@
 ﻿using Characters;
+using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Runtime.CompilerServices;
 
@@ -38,7 +40,7 @@ namespace MagicDestroyers
 
       using (StreamReader sr = PlayersInfoFile.OpenText())
       {
-        string? line = string.Empty;
+        string line = string.Empty;
 
         while ((line = sr.ReadLine()) != null)
         {

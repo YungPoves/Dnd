@@ -35,13 +35,13 @@ namespace Characters
 
       if (AbilityCost > this.AbilityPoints)
       {
-        Console.WriteLine($"{this.Name} does not have enough ability points to points so use {nameof(Strike)}.");
+        //Console.WriteLine($"{this.Name} does not have enough ability points to points so use {nameof(Strike)}.");
         
         return 0;
       }
       else
       {
-        Console.WriteLine($"{this.Name} uses {nameof(Strike)}!");
+        //Console.WriteLine($"{this.Name} uses {nameof(Strike)}!");
         this.AbilityPoints -= AbilityCost;
 
         return base.Weapon.Damage * 2;
@@ -55,12 +55,12 @@ namespace Characters
       if (this.AbilityPoints >= AbilityCost)
       {
         this.AbilityPoints -= AbilityCost;
-        Console.WriteLine($"{this.Name} uses {nameof(Execute)}!");
+        //Console.WriteLine($"{this.Name} uses {nameof(Execute)}!");
         return base.Weapon.Damage * 2;
       }
       else
       {
-        Console.WriteLine($"{this.Name} does not have enough ability points to points to use {nameof(Execute)}.");
+        //Console.WriteLine($"{this.Name} does not have enough ability points to points to use {nameof(Execute)}.");
         return 0;
       }
     }
@@ -72,7 +72,7 @@ namespace Characters
       this.BodyArmor.ArmorPoints *= 2;
       this.AbilityPoints -= apCost;
 
-      Console.WriteLine($"{this.Name} uses Skin Harden.");
+      //Console.WriteLine($"{this.Name} uses Skin Harden.");
     }
 
     public override int Attack()
@@ -92,7 +92,7 @@ namespace Characters
       this.BodyArmor.ArmorPoints *= 2;
       this.AbilityPoints -= apCost;
 
-      Console.WriteLine($"{this.Name} uses {nameof(SkinHarden)}.");
+      //Console.WriteLine($"{this.Name} uses {nameof(SkinHarden)}.");
     }
     #endregion
   }

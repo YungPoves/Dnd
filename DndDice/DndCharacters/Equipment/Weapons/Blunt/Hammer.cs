@@ -1,4 +1,6 @@
-﻿namespace MagicDestroyers.Equipment.Weapons.Blunt
+﻿using System;
+
+namespace MagicDestroyers.Equipment.Weapons.Blunt
 {
   public class Hammer : Weapon
   {

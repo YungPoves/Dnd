@@ -1,4 +1,6 @@
-﻿namespace MagicDestroyers.Equipment.Weapons
+﻿using System;
+
+namespace MagicDestroyers.Equipment.Weapons
 {
   public abstract class Weapon
   {
@@ -22,7 +24,7 @@
         }
         catch (ArgumentOutOfRangeException ex)
         {
-          Console.WriteLine(ex.Message);
+          //Console.WriteLine(ex.Message);
         }
       }
     }

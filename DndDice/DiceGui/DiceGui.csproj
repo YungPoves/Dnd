@@ -86,6 +86,10 @@
       <Project>{57978dc7-6965-4abd-afe1-d87e326ca5f8}</Project>
       <Name>DiceProject</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DndCharacters\DndCharacters.csproj">
+      <Project>{23619c4f-6a16-431a-a33c-c4d992853662}</Project>
+      <Name>DndCharacters</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

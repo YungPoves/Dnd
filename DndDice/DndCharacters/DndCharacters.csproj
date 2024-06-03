@@ -4,4 +4,17 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>1701;1702;IDE0003;IDE0002</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <NoWarn>1701;1702;IDE0003;IDE0002</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include=".Helpers\CharacterBaseClass.cs" />
+    <Compile Include=".Helpers\CharacterHelper.cs" />
+  </ItemGroup>
+
 </Project>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using Die;
+using DndCharacters;
 
 namespace DiceGui
 {
@@ -17,8 +18,16 @@ namespace DiceGui
       this.viewModel = viewModel;
     }
 
+    public Form1(DiceViewModel diceViewModel, CharacterViewModel characterViewModel)
+    {
+      InitializeComponent();
+      this.viewModel = diceViewModel;
+      this.characterViewModel = characterViewModel;
+    }
+
     private void ButtonD4_Click(object sender, EventArgs e)
     {
+      txtMessageLog.AppendText($"{characterViewModel.Test()}");
       txtMessageLog.AppendText($"{viewModel.D4()}{Environment.NewLine}");
     }
     private void ButtonD6_Click(object sender, EventArgs e)
@@ -57,5 +66,6 @@ namespace DiceGui
     }
 
     private readonly DiceViewModel viewModel;
+    private readonly CharacterViewModel characterViewModel;
   }
 }

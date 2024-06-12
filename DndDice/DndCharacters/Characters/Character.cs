@@ -96,8 +96,8 @@ namespace Characters
 
     public int StrengthModifier 
     {
-      get => strengthModifier;
-      set => strengthModifier = (Strength - 10) / 2;
+      get => strengthModifier = (Strength - 10) / 2;
+      //set => strengthModifier = (Strength - 10) / 2;
     }
 
     public virtual string Name

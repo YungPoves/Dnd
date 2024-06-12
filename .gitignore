@@ -60,3 +60,6 @@ DndDice/ClassLibrary1/obj/
 DndDice/DiceGui/bin/
 DndDice/DndCharacters/obj/
 DndDice/DndCharacters/bin/
+DndDice/DndUnitTests/bin/
+DndDice/DndUnitTests/obj/
+DndDice/packages/

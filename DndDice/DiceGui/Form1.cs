@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using DiceGui.ViewModels;
 using Die;
 using DndCharacters;
 
@@ -71,6 +72,7 @@ namespace DiceGui
       form2.Show();
     }
 
+    private readonly ViewModel viewModel1;
     private readonly DiceViewModel viewModel;
     private readonly CharacterViewModel characterViewModel;
   }

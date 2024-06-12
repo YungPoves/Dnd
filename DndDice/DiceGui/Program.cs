@@ -1,4 +1,5 @@
-﻿using Die;
+﻿using DiceGui.ViewModels;
+using Die;
 using DndCharacters;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,7 @@ namespace DiceGui
       Application.EnableVisualStyles();
       Application.SetCompatibleTextRenderingDefault(false);
 
+      ViewModel viewModel1 = new ViewModel();
       DiceViewModel viewModel = new DiceViewModel();
       CharacterViewModel characterViewModel = new CharacterViewModel();
       Form1 form = new Form1(viewModel, characterViewModel);

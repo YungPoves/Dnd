@@ -63,6 +63,43 @@ namespace Characters
       }
     }
 
+    public int Strength 
+    {
+      get => strength;
+      set => strength = value;
+    }
+    public int Dexterity
+    {
+      get => dexterity;
+      set => dexterity = value;
+    }
+    public int Constitution 
+    {
+      get => constitution;
+      set => constitution = value;
+    }
+    public int Wisdom 
+    {
+      get => wisdom;
+      set => wisdom = value;
+    }
+    public int Intelligence 
+    {
+      get => intelligence;
+      set => intelligence = value;
+    }
+    public int Charisma 
+    {
+      get => charisma;
+      set => charisma = value;
+    }
+
+    public int StrengthModifier 
+    {
+      get => strengthModifier;
+      set => strengthModifier = (Strength - 10) / 2;
+    }
+
     public virtual string Name
     {
       get => name;
@@ -106,6 +143,15 @@ namespace Characters
     #region Fields
     private int healthPoints;
     private int level;
+
+    private int strength;
+    private int dexterity;
+    private int constitution;
+    private int wisdom;
+    private int intelligence;
+    private int charisma;
+
+    private int strengthModifier;
 
     private string name;
 

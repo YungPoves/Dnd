@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Characters;
+using System;
 
 namespace MagicDestroyers.Equipment.Weapons
 {
@@ -9,6 +10,7 @@ namespace MagicDestroyers.Equipment.Weapons
     public Weapon(int damage)
     {
       this.Damage = damage;
+      this.DamageTotal = damage + this.DamageModifier;
     }
 
     public virtual int Damage
@@ -29,6 +31,19 @@ namespace MagicDestroyers.Equipment.Weapons
       }
     }
 
+    public int DamageModifier 
+    {
+      get => damageModifier;
+      set => damageModifier = value;
+    }
+    public int DamageTotal
+    {
+      get => damageTotal;
+      set => damageTotal = value;
+    }
+
     private int damage;
+    private int damageModifier;
+    private int damageTotal;
   }
 }

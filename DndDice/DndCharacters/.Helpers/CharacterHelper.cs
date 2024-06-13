@@ -15,6 +15,20 @@ namespace DndCharacters.Helpers
 
     public Warrior Warrior => Helper<Warrior>();
 
+    public Warrior NewWarrior()
+    {
+      return new Warrior();
+    }
+
+    public TCharacterType NewCharacter<TCharacterType>() where TCharacterType : Character
+    {
+      Type characterType = typeof(TCharacterType);
+
+      Activator.CreateInstance(characterType);
+
+      return (TCharacterType)character;
+    }
+
     private TCharacterHelperTyper Helper<TCharacterHelperTyper>() where TCharacterHelperTyper : Character
     {
       Type helperType = typeof(TCharacterHelperTyper);
@@ -26,5 +40,6 @@ namespace DndCharacters.Helpers
     }
 
     private readonly Dictionary<Type, object> characterHelperByType = new Dictionary<Type, object>();
+    private readonly Character character;
   }
 }

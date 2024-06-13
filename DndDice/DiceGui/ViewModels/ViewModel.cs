@@ -1,4 +1,6 @@
-﻿using DiceProject;
+﻿using Characters;
+using DiceProject;
+using DndCharacters.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,7 +40,15 @@ namespace DiceGui.ViewModels
       return DiceRoller.D100s.Roll().ToString();
     }
 
+    public Warrior GetWarrior()
+    {
+      return CharacterHelper.NewWarrior();
+    }
+
     private static DiceRoller diceRoller;
+    private static CharacterHelper characterHelper;
+
     public static DiceRoller DiceRoller => diceRoller = new DiceRoller();
+    public static CharacterHelper CharacterHelper => characterHelper = new CharacterHelper();
   }
 }

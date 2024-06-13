@@ -23,7 +23,8 @@ namespace DiceGui
       ViewModel viewModel1 = new ViewModel();
       DiceViewModel viewModel = new DiceViewModel();
       CharacterViewModel characterViewModel = new CharacterViewModel();
-      Form1 form = new Form1(viewModel, characterViewModel);
+      //Form1 form = new Form1(viewModel, characterViewModel);
+      Form1 form = new Form1(viewModel1, characterViewModel);
 
       Application.Run(form);
     }

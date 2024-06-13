@@ -10,6 +10,6 @@ namespace DndCharacters.Helpers
 
     private static CharacterHelper characterHelper;
 
-    public static CharacterHelper CharacterHelper { get => characterHelper; set => characterHelper = value; }
+    public static CharacterHelper CharacterHelper => characterHelper = new CharacterHelper();
   }
 }

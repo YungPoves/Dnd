@@ -1,4 +1,5 @@
 ﻿using Characters;
+using DndCharacters.Helpers;
 using MagicDestroyers.Constants;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
@@ -6,7 +7,7 @@ using System;
 namespace DndUnitTests.CharacterTests
 {
   [TestClass]
-  public class Character
+  public class CharacterTests : CharacterBaseClass
   {
     [TestMethod]
     public void DefaultWarrior()
@@ -40,6 +41,24 @@ namespace DndUnitTests.CharacterTests
       Assert.IsNotNull(warrior);
       Assert.IsTrue(warrior.Strength == 20);
       Assert.IsTrue(warrior.StrengthModifier == 5);
+    }
+    [TestMethod]
+    public void CharacterHelperTests()
+    {
+      Warrior warrior = CharacterHelper.NewWarrior();
+
+      Assert.IsNotNull(warrior);
+    }
+    [TestMethod]
+    public void NewWarrior()
+    {
+      Character warrior = new Warrior();
+
+      Assert.IsNotNull(warrior);
+      Assert.IsTrue(warrior.Name == Constants.Warrior.DefaultName);
+      Assert.IsTrue(warrior.Level == Constants.Warrior.DefaultLevel);
+      Assert.IsTrue(warrior.HealthPoints == Constants.Warrior.DefaultHealth);
+      Assert.IsTrue(warrior is Warrior);
     }
   }
 }

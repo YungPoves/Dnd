@@ -26,6 +26,13 @@ namespace DiceGui
       this.characterViewModel = characterViewModel;
     }
 
+    public Form1(ViewModel viewModel, CharacterViewModel characterViewModel)
+    {
+      InitializeComponent();
+      this.viewModel1 = viewModel;
+      this.characterViewModel = characterViewModel;
+    }
+
     private void ButtonD4_Click(object sender, EventArgs e)
     {
       txtMessageLog.AppendText($"{characterViewModel.Test()}");
@@ -68,8 +75,11 @@ namespace DiceGui
 
     private void ButtonCharacterSheet_Click(object sender, EventArgs e)
     {
-      Form2 form2 = new Form2();
-      form2.Show();
+      //Form2 form2 = new Form2();
+      //form2.Show();
+
+      CharacterSheet characterSheet = new CharacterSheet(viewModel1);
+      characterSheet.Show();
     }
 
     private readonly ViewModel viewModel1;

@@ -40,9 +40,15 @@ namespace DiceGui.ViewModels
       return DiceRoller.D100s.Roll().ToString();
     }
 
-    public Warrior GetWarrior()
+    public Warrior CreateWarrior()
     {
-      return CharacterHelper.NewWarrior();
+      Warrior warrior = CharacterHelper.NewWarrior();
+      return warrior;
+    }
+    public Mage CreateMage()
+    {
+      Mage mage = CharacterHelper.NewMage();
+      return mage;
     }
 
     private static DiceRoller diceRoller;

@@ -20,11 +20,11 @@ namespace DiceGui
       Application.EnableVisualStyles();
       Application.SetCompatibleTextRenderingDefault(false);
 
-      ViewModel viewModel1 = new ViewModel();
-      DiceViewModel viewModel = new DiceViewModel();
+      ViewModel viewModel = new ViewModel();
+      DiceViewModel diceViewModel = new DiceViewModel();
       CharacterViewModel characterViewModel = new CharacterViewModel();
       //Form1 form = new Form1(viewModel, characterViewModel);
-      Form1 form = new Form1(viewModel1, characterViewModel);
+      Form1 form = new Form1(diceViewModel, characterViewModel);
 
       Application.Run(form);
     }

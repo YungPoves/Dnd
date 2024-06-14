@@ -117,4 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="comboBoxClasses.DataSource" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
+        ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
+        PTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUB
+        AAAALlN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbU3lzdGVtLlR5cGUDAAAABl9pdGVt
+        cwVfc2l6ZQhfdmVyc2lvbgMAAA1TeXN0ZW0uVHlwZVtdCAgCAAAACQMAAAADAAAAAwAAAAcDAAAAAAEA
+        AAAEAAAAAwtTeXN0ZW0uVHlwZQkEAAAACQUAAAAJBgAAAAoEBAAAAB9TeXN0ZW0uVW5pdHlTZXJpYWxp
+        emF0aW9uSG9sZGVyAwAAAAREYXRhCVVuaXR5VHlwZQxBc3NlbWJseU5hbWUBAAEIBgcAAAASQ2hhcmFj
+        dGVycy5XYXJyaW9yBAAAAAYIAAAARERuZENoYXJhY3RlcnMsIFZlcnNpb249MS4wLjAuMCwgQ3VsdHVy
+        ZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsAQUAAAAEAAAABgkAAAAPQ2hhcmFjdGVycy5NYWdl
+        BAAAAAkIAAAAAQYAAAAEAAAABgsAAAATQ2hhcmFjdGVycy5Bc3Nhc3NpbgQAAAAJCAAAAAs=
+</value>
+  </data>
 </root>

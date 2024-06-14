@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -28,10 +29,21 @@ namespace DiceGui
 
     private void ButtonNewWarrior_Click(object sender, EventArgs e)
     {
-      warrior = viewModel.GetWarrior();
-      this.textBox1.Text = "";
-      this.textBox1.AppendText(warrior.ToString());
+      character = viewModel.CreateWarrior();
+      this.textBox1.AppendText(character.ToString());
     }
+    private void ButtonNewMage_Click(object sender, EventArgs e)
+    {
+      character = viewModel.CreateMage();
+      this.textBox1.AppendText(character.ToString());
+    }
+    private void ComboBoxClasses_SelectedIndexChanged(object sender, EventArgs e)
+    {
+      type = this.comboBoxClasses.SelectedItem;
+    }
+
+    private Type classType;
+    private object type;
 
     private Character character;
     private Warrior warrior;

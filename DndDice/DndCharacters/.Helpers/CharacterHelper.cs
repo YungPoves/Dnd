@@ -1,7 +1,6 @@
 ﻿using Characters;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace DndCharacters.Helpers
 {
@@ -11,35 +10,31 @@ namespace DndCharacters.Helpers
     {
     }
 
-    public Character Character => Helper<Character>();
+    public Character Characters => Helper<Character>();
 
-    public Warrior Warrior => Helper<Warrior>();
+    public Warrior Warriors => Helper<Warrior>();
+
+    public Mage Mages => Helper<Mage>();
 
     public Warrior NewWarrior()
     {
-      return new Warrior();
+      return Warriors;
     }
-
-    public TCharacterType NewCharacter<TCharacterType>() where TCharacterType : Character
+    public Mage NewMage()
     {
-      Type characterType = typeof(TCharacterType);
-
-      Activator.CreateInstance(characterType);
-
-      return (TCharacterType)character;
+      return Mages;
     }
 
     private TCharacterHelperTyper Helper<TCharacterHelperTyper>() where TCharacterHelperTyper : Character
     {
       Type helperType = typeof(TCharacterHelperTyper);
 
-      if (characterHelperByType.ContainsKey(helperType))
+      if (characterHelperByType.ContainsKey(helperType) == false)
         characterHelperByType[helperType] = Activator.CreateInstance(helperType);
 
       return (TCharacterHelperTyper)characterHelperByType[helperType];
     }
 
     private readonly Dictionary<Type, object> characterHelperByType = new Dictionary<Type, object>();
-    private readonly Character character;
   }
 }

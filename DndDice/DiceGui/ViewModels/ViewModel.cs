@@ -42,13 +42,11 @@ namespace DiceGui.ViewModels
 
     public Warrior CreateWarrior()
     {
-      Warrior warrior = CharacterHelper.NewWarrior();
-      return warrior;
+      return CharacterHelper.Warriors;
     }
     public Mage CreateMage()
     {
-      Mage mage = CharacterHelper.NewMage();
-      return mage;
+      return CharacterHelper.Mages;
     }
 
     private static DiceRoller diceRoller;

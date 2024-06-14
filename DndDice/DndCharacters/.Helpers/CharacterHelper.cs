@@ -16,15 +16,6 @@ namespace DndCharacters.Helpers
 
     public Mage Mages => Helper<Mage>();
 
-    public Warrior NewWarrior()
-    {
-      return Warriors;
-    }
-    public Mage NewMage()
-    {
-      return Mages;
-    }
-
     private TCharacterHelperTyper Helper<TCharacterHelperTyper>() where TCharacterHelperTyper : Character
     {
       Type helperType = typeof(TCharacterHelperTyper);

@@ -9,6 +9,10 @@ namespace DndUnitTests.CharacterTests
   [TestClass]
   public class CharacterTests : CharacterBaseClass
   {
+    [TestInitialize]
+    public void Setup() 
+    {
+    }
     [TestMethod]
     public void DefaultWarrior()
     {
@@ -20,6 +24,7 @@ namespace DndUnitTests.CharacterTests
       Assert.IsTrue(warrior.HealthPoints == Constants.Warrior.DefaultHealth);
       Assert.IsTrue(warrior.AbilityPoints == Constants.Warrior.DefaultAbilityPoints);
     }
+
     [TestMethod]
     public void WarriorWithUserValues()
     {
@@ -42,13 +47,35 @@ namespace DndUnitTests.CharacterTests
       Assert.IsTrue(warrior.Strength == 20);
       Assert.IsTrue(warrior.StrengthModifier == 5);
     }
+
+    [TestMethod]
+    public void WarriorWithParameters()
+    {
+      Character warrior = CharacterHelper.WarriorWithParams(parameters);
+
+      Assert.IsNotNull(warrior);
+      Assert.IsTrue(warrior.Name == (string)parameters[0]);
+      Assert.IsTrue(warrior.Level == (int)parameters[1]);
+      Assert.IsTrue(warrior.HealthPoints == (int)parameters[2]);
+    }
+
+    [TestMethod]
+    public void WarriorWith2Parameters()
+    {
+      Character warrior = CharacterHelper.WarriorWithParams("Name", 3);
+
+      Assert.IsNotNull(warrior);
+      Assert.IsTrue(warrior.Name == "Name");
+      Assert.IsTrue(warrior.Level == 3);
+    }
     [TestMethod]
     public void CharacterHelperTests()
     {
-      Warrior warrior = CharacterHelper.NewWarrior();
+      Warrior warrior = CharacterHelper.Warriors;
 
       Assert.IsNotNull(warrior);
     }
+
     [TestMethod]
     public void NewWarrior()
     {
@@ -60,27 +87,7 @@ namespace DndUnitTests.CharacterTests
       Assert.IsTrue(warrior.HealthPoints == Constants.Warrior.DefaultHealth);
       Assert.IsTrue(warrior is Warrior);
     }
-    [TestMethod]
-    public void NewWarriorByType()
-    {
-      Character character = ViewModel.CharacterHelper.NewCharacter<Warrior>();
 
-      Assert.IsNotNull(character);
-      Assert.IsTrue(character is Warrior);
-      Assert.IsTrue(character.Name == Constants.Warrior.DefaultName);
-      Assert.IsTrue(character.Level == Constants.Warrior.DefaultLevel);
-      Assert.IsTrue(character.HealthPoints == Constants.Warrior.DefaultHealth);
-    }
-    [TestMethod]
-    public void NewMageByType()
-    {
-      Character character = ViewModel.CharacterHelper.NewCharacter<Mage>();
-
-      Assert.IsNotNull(character);
-      Assert.IsTrue(character is Mage);
-      Assert.IsTrue(character.Name == Constants.Mage.DefaultName);
-      Assert.IsTrue(character.Level == Constants.Mage.DefaultLevel);
-      Assert.IsTrue(character.HealthPoints == Constants.Mage.DefaultHealth);
-    }
+    private readonly object[] parameters = { "Harald", 25, 350 };
   }
 }

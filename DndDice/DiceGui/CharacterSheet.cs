@@ -31,6 +31,7 @@ namespace DiceGui
     {
       character = viewModel.CreateWarrior();
       this.textBox1.AppendText(character.ToString());
+      this.textBoxName.Text = character.Name;
     }
     private void ButtonNewMage_Click(object sender, EventArgs e)
     {

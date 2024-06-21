@@ -51,12 +51,13 @@ namespace DndUnitTests.CharacterTests
     [TestMethod]
     public void WarriorWithParameters()
     {
-      Character warrior = CharacterHelper.WarriorWithParams(parameters);
+      character = CharacterHelper.WarriorWithParams(parameters);
 
-      Assert.IsNotNull(warrior);
-      Assert.IsTrue(warrior.Name == (string)parameters[0]);
-      Assert.IsTrue(warrior.Level == (int)parameters[1]);
-      Assert.IsTrue(warrior.HealthPoints == (int)parameters[2]);
+      Assert.IsNotNull(character);
+      Assert.IsTrue(character.Name == (string)parameters[0]);
+      Assert.IsTrue(character.Level == (int)parameters[1]);
+      Assert.IsTrue(character.HealthPoints == (int)parameters[2]);
+      Assert.IsTrue(character.Faction == MagicDestroyers.Enumerations.Factions.Melee);
     }
 
     [TestMethod]
@@ -88,6 +89,19 @@ namespace DndUnitTests.CharacterTests
       Assert.IsTrue(warrior is Warrior);
     }
 
+    [TestMethod]
+    public void MageWithParams()
+    {
+      character = CharacterHelper.MageWithParams(parameters);
+
+      Assert.IsNotNull(character);
+      Assert.IsTrue(character.Name == parameters[0].ToString());
+      Assert.IsTrue(character.Level == (int)parameters[1]);
+      Assert.IsTrue(character.HealthPoints == (int)parameters[2]);
+      Assert.IsTrue(character.Faction == MagicDestroyers.Enumerations.Factions.Spellcaster);
+    }
+
+    private Character character;
     private readonly object[] parameters = { "Harald", 25, 350 };
   }
 }

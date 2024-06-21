@@ -2,13 +2,14 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using Newtonsoft.Json.Serialization;
 using System.Runtime.CompilerServices;
+using Newtonsoft.Json;
 
 namespace MagicDestroyers
 {
   public static class PlayersInfo
   {
-    #region Methods
     static PlayersInfo()
     {
       PlayersInfoDirectoryPath = @"Info\";
@@ -62,6 +63,22 @@ namespace MagicDestroyers
 
     #region Methods
 
+    public static void Save(Character character)
+    {
+      CharacterFileName = string.Concat(character.Name, ".txt");
+      FileInfo characterFile = new FileInfo(Path.Combine(PlayersInfoDirectoryPath, CharacterFileName));
+      string json = JsonConvert.SerializeObject(character);
+
+      if (!characterFile.Exists)
+      {
+        characterFile.Create().Close();
+        using (StreamWriter sw = characterFile.CreateText())
+        {
+          sw.WriteLine(json);
+        }
+      }
+    }
+
     public static void Save(List<Character> characters)
     {
       using (StreamWriter sw = PlayersInfoFile.CreateText())
@@ -71,6 +88,25 @@ namespace MagicDestroyers
           sw.WriteLine(string.Join(",", $"{character.Name},{character.Faction},{character.Level}"));
         }
       }
+    }
+
+    public static Character LoadWarrior(string characterName)
+    {
+      CharacterFileName = string.Concat(characterName, ".txt");
+      FileInfo characterFile = new FileInfo(Path.Combine(PlayersInfoDirectoryPath, CharacterFileName));
+
+      if (characterFile.Exists)
+      {        
+        using (StreamReader sr = new StreamReader(characterFile.FullName))
+        {
+          string line = sr.ReadLine();
+
+          Character character = JsonConvert.DeserializeObject<Warrior>(line) as Warrior;
+          
+          return character;
+        }
+      }
+      else return null;
     }
 
     public static void UpdateFullInfo()
@@ -149,8 +185,6 @@ namespace MagicDestroyers
       set => playersInfoFile = value;
     }
 
-    #endregion
-
     public static string PlayersInfoFileName
     {
       get => playersInfoFileName;
@@ -161,10 +195,16 @@ namespace MagicDestroyers
       get => playersInfoDirectoryPath;
       private set => playersInfoDirectoryPath = value;
     }
+
     public static List<string[]> Fullinfo
     {
       get => fullinfo;
       set => fullinfo = value;
+    }
+    public static string CharacterFileName
+    {
+      get => characterFileName;
+      set => characterFileName = value;
     }
 
     public static int[] Scores { get => scores; set => scores = value; }
@@ -176,6 +216,7 @@ namespace MagicDestroyers
     private static FileInfo playersInfoFile;
     private static string playersInfoFileName;
     private static string playersInfoDirectoryPath;
+    private static string characterFileName;
     private static List<string[]> fullinfo;
 
     private static int[] scores;

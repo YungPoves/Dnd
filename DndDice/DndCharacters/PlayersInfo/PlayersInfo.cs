@@ -101,7 +101,7 @@ namespace MagicDestroyers
         {
           string line = sr.ReadLine();
 
-          Character character = JsonConvert.DeserializeObject<Warrior>(line) as Warrior;
+          Character character = JsonConvert.DeserializeObject<Warrior>(line);
           
           return character;
         }

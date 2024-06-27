@@ -40,14 +40,10 @@ namespace DiceGui
     }
     private void ComboBoxClasses_SelectedIndexChanged(object sender, EventArgs e)
     {
-      type = this.comboBoxClasses.SelectedItem;
+      //type = this.comboBoxClasses.SelectedItem;
     }
 
-    private Type classType;
-    private object type;
-
     private Character character;
-    private Warrior warrior;
     private readonly ViewModel viewModel;
   }
 }

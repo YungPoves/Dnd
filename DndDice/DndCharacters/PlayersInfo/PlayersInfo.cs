@@ -116,26 +116,6 @@ namespace MagicDestroyers
       JObject o1 = JObject.Parse(File.ReadAllText(characterFile.FullName));
       Warrior warrior = o1.ToObject<Warrior>();
 
-      // read JSON directly from a file
-      using (StreamReader file = File.OpenText(characterFile.FullName))
-
-      using (JsonTextReader reader = new JsonTextReader(file))
-      {
-        JObject o2 = (JObject)JToken.ReadFrom(reader);
-      }
-
-      //if (characterFile.Exists)
-      //{
-      //  using (StreamReader sr = new StreamReader(characterFile.FullName))
-      //  {
-      //    string line = sr.ReadToEnd();
-      //    string jsonString = JsonConvert.SerializeObject(line);
-
-      //    Character character = JsonConvert.DeserializeObject<Warrior>(jsonString);
-
-      //    return character;
-      //  }
-      //}
       return null;
     }
 

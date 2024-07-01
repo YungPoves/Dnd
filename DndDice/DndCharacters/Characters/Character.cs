@@ -16,10 +16,6 @@ namespace Characters
 
     private const string DefaultName = "Default Name";
 
-    protected Character()
-    {
-    }
-
     protected Character(string name, int level, int healthPoints)
     {
       this.Name = name;
@@ -101,7 +97,6 @@ namespace Characters
     public int StrengthModifier 
     {
       get => strengthModifier = (Strength - 10) / 2;
-      //set => strengthModifier = (Strength - 10) / 2;
     }
 
     public virtual string Name

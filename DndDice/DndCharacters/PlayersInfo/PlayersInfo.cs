@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using Newtonsoft.Json.Serialization;
-using System.Runtime.CompilerServices;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -19,6 +17,8 @@ namespace MagicDestroyers
       PlayersInfoFile = new FileInfo(PlayersInfoDirectoryPath + PlayersInfoFileName);
       Fullinfo = new List<string[]>();
     }
+
+    #region Methods
 
     public static void Initialize(List<Character> characters)
     {
@@ -62,8 +62,6 @@ namespace MagicDestroyers
       }
     }
 
-    #region Methods
-
     public static void Save(Character character)
     {
       CharacterFileName = string.Concat(character.Name, ".txt");
@@ -91,32 +89,15 @@ namespace MagicDestroyers
       }
     }
 
-    public static Character LoadWarrior(string characterName)
+    public static Character LoadCharacter<TCharacterType>(string characterName) where TCharacterType : Character
     {
-      //CharacterFileName = string.Concat(characterName, ".txt");
-      //FileInfo characterFile = new FileInfo(Path.Combine(PlayersInfoDirectoryPath, CharacterFileName));
-
-      //if (characterFile.Exists)
-      //{        
-      //  using (StreamReader sr = new StreamReader(characterFile.FullName))
-      //  {
-      //    string line = sr.ReadToEnd();
-      //    string jsonString = JsonConvert.SerializeObject(line);
-
-      //    Character character = JsonConvert.DeserializeObject<Warrior>(jsonString);
-
-      //    return character;
-      //  }
-      //}
-      //else return null;
-
       CharacterFileName = string.Concat(characterName, ".json");
       FileInfo characterFile = new FileInfo(Path.Combine(PlayersInfoDirectoryPath, CharacterFileName));
 
-      JObject o1 = JObject.Parse(File.ReadAllText(characterFile.FullName));
-      Warrior warrior = o1.ToObject<Warrior>();
+      JObject jObject = JObject.Parse(File.ReadAllText(characterFile.FullName));
+      TCharacterType newCharacter = jObject.ToObject<TCharacterType>();
 
-      return null;
+      return newCharacter;
     }
 
     public static void UpdateFullInfo()

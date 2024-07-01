@@ -5,6 +5,7 @@ using System.IO;
 using Newtonsoft.Json.Serialization;
 using System.Runtime.CompilerServices;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace MagicDestroyers
 {
@@ -92,21 +93,50 @@ namespace MagicDestroyers
 
     public static Character LoadWarrior(string characterName)
     {
-      CharacterFileName = string.Concat(characterName, ".txt");
+      //CharacterFileName = string.Concat(characterName, ".txt");
+      //FileInfo characterFile = new FileInfo(Path.Combine(PlayersInfoDirectoryPath, CharacterFileName));
+
+      //if (characterFile.Exists)
+      //{        
+      //  using (StreamReader sr = new StreamReader(characterFile.FullName))
+      //  {
+      //    string line = sr.ReadToEnd();
+      //    string jsonString = JsonConvert.SerializeObject(line);
+
+      //    Character character = JsonConvert.DeserializeObject<Warrior>(jsonString);
+
+      //    return character;
+      //  }
+      //}
+      //else return null;
+
+      CharacterFileName = string.Concat(characterName, ".json");
       FileInfo characterFile = new FileInfo(Path.Combine(PlayersInfoDirectoryPath, CharacterFileName));
 
-      if (characterFile.Exists)
-      {        
-        using (StreamReader sr = new StreamReader(characterFile.FullName))
-        {
-          string line = sr.ReadToEnd();
+      JObject o1 = JObject.Parse(File.ReadAllText(characterFile.FullName));
+      Warrior warrior = o1.ToObject<Warrior>();
 
-          Character character = JsonConvert.DeserializeObject<Warrior>(line);
-          
-          return character;
-        }
+      // read JSON directly from a file
+      using (StreamReader file = File.OpenText(characterFile.FullName))
+
+      using (JsonTextReader reader = new JsonTextReader(file))
+      {
+        JObject o2 = (JObject)JToken.ReadFrom(reader);
       }
-      else return null;
+
+      //if (characterFile.Exists)
+      //{
+      //  using (StreamReader sr = new StreamReader(characterFile.FullName))
+      //  {
+      //    string line = sr.ReadToEnd();
+      //    string jsonString = JsonConvert.SerializeObject(line);
+
+      //    Character character = JsonConvert.DeserializeObject<Warrior>(jsonString);
+
+      //    return character;
+      //  }
+      //}
+      return null;
     }
 
     public static void UpdateFullInfo()

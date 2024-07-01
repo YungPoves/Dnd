@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="CharacterTests\CharacterTests.cs" />
     <Compile Include="PlayersInfoTests\PlayersInfoUnitTest.cs" />
+    <Compile Include="PlayersInfoTests\LoadJsonTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WeaponTests\AxeTests.cs" />
   </ItemGroup>

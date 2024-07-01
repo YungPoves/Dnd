@@ -20,15 +20,6 @@ namespace DndUnitTests.PlayersInfoTests
       Assert.IsTrue(File.Exists(characterFile.FullName));
     }
 
-    [TestMethod]
-    public void TestLoadJson()
-    {
-      character = PlayersInfo.LoadWarrior("Harald Stenhard");
-
-      Assert.IsNotNull(character);
-      Assert.IsTrue(character.HealthPoints != warrior.HealthPoints);
-    }
-
     FileInfo characterFile;
 
     static readonly Character warrior = new Warrior();

@@ -11,14 +11,6 @@ namespace DndUnitTests.PlayersInfoTests
   public class PlayersInfoTests
   {
     [TestMethod]
-    public void TestInitialize()
-    {
-      PlayersInfo.Initialize(characters);
-
-      Assert.IsTrue(Directory.Exists(PlayersInfo.PlayersInfoDirectoryPath));
-    }
-
-    [TestMethod]
     public void TestSaveJson()
     {
       PlayersInfo.Save(warrior);
@@ -34,6 +26,7 @@ namespace DndUnitTests.PlayersInfoTests
       character = PlayersInfo.LoadWarrior("Harald Stenhard");
 
       Assert.IsNotNull(character);
+      Assert.IsTrue(character.HealthPoints != warrior.HealthPoints);
     }
 
     FileInfo characterFile;

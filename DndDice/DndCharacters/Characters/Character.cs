@@ -16,6 +16,10 @@ namespace Characters
 
     private const string DefaultName = "Default Name";
 
+    protected Character()
+    {
+    }
+
     protected Character(string name, int level, int healthPoints)
     {
       this.Name = name;

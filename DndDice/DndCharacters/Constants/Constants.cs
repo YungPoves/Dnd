@@ -17,7 +17,7 @@
       public const string DefaultName = "Default Warrior";
       public const string CharacterClass = "WARRIOR";
 
-      public const int DefaultHealth = 350;
+      public const int DefaultHealth = 400;
       public const int DefaultLevel = 1;
       public const int DefaultAbilityPoints = 100;
     }

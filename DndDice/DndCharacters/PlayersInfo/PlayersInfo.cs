@@ -99,7 +99,7 @@ namespace MagicDestroyers
       {        
         using (StreamReader sr = new StreamReader(characterFile.FullName))
         {
-          string line = sr.ReadLine();
+          string line = sr.ReadToEnd();
 
           Character character = JsonConvert.DeserializeObject<Warrior>(line);
           

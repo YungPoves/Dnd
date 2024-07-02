@@ -2,7 +2,6 @@
 using MagicDestroyers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json.Linq;
-using System;
 using System.IO;
 
 namespace DndUnitTests.PlayersInfoTests
@@ -10,34 +9,37 @@ namespace DndUnitTests.PlayersInfoTests
   [TestClass]
   public class LoadJsonTests
   {
-    [TestInitialize] public void Setup()
-    {
-    }
-
     [TestMethod]
     public void TestLoadCharacterWarrior()
     {
-      CharacterFileName = string.Concat("Warrior.json");
-      characterFile = new FileInfo(Path.Combine(PlayersInfoDirectoryPath, CharacterFileName));
-      dynamic jObject = JObject.Parse(File.ReadAllText(characterFile.FullName));
+      jObjectTest = JObject.Parse(File.ReadAllText(Path.Combine(PlayersInfo.PlayersInfoDirectoryPath, warriorFileName)));
+      TestWarrior = jObjectTest.ToObject<Warrior>();
 
-      Character character = PlayersInfo.LoadCharacter<Warrior>("Harald Stenhard");
+      CharacterToTest = PlayersInfo.LoadCharacter<Warrior>("Harald Stenhard");
 
-      Assert.IsNotNull(character);
-      //Assert.IsTrue(character.HealthPoints == jObject.HealthPoints);
-      Assert.IsTrue(character.HealthPoints == 75);
+      Assert.IsNotNull(CharacterToTest);
+      Assert.IsTrue(CharacterToTest.HealthPoints == TestWarrior.HealthPoints);
+      Assert.IsTrue(CharacterToTest.Name != TestWarrior.Name);
     }
     [TestMethod]
     public void TestLoadCharacterKnight()
     {
-      Character character = PlayersInfo.LoadCharacter<Knight>("k1");
+      jObjectTest = JObject.Parse(File.ReadAllText(Path.Combine(PlayersInfo.PlayersInfoDirectoryPath, knightFileName)));
+      TestKnight = jObjectTest.ToObject<Knight>();
 
-      Assert.IsNotNull(character);
-      Assert.IsTrue(character.HealthPoints == 299);
+      CharacterToTest = PlayersInfo.LoadCharacter<Knight>("k1");
+
+      Assert.IsNotNull(CharacterToTest);
+      Assert.IsTrue(CharacterToTest.HealthPoints == TestKnight.HealthPoints);
+      Assert.IsTrue(CharacterToTest.Name != TestKnight.Name);
     }
 
-    private const string PlayersInfoDirectoryPath = @"Info\";
-    private string CharacterFileName;
-    FileInfo characterFile;
+    private const string warriorFileName = "Warrior.json";
+    private const string knightFileName = "Knight.json";
+
+    private Character CharacterToTest;
+    private Warrior TestWarrior;
+    private Knight TestKnight;
+    private JObject jObjectTest;
   }
 }

@@ -1,6 +1,7 @@
 ﻿using Characters;
 using DiceProject;
 using DndCharacters.Helpers;
+using MagicDestroyers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,6 +48,10 @@ namespace DiceGui.ViewModels
     public Mage CreateMage()
     {
       return CharacterHelper.Mages;
+    }
+    public Character LoadCharacter(string characterName)
+    {
+      return PlayersInfo.LoadCharacter<Warrior>(characterName);
     }
 
     private static DiceRoller diceRoller;

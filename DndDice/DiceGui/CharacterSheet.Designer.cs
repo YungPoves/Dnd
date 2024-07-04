@@ -41,6 +41,8 @@ namespace DiceGui
       this.textBoxStrength = new System.Windows.Forms.TextBox();
       this.textBoxDexterity = new System.Windows.Forms.TextBox();
       this.textBoxName = new System.Windows.Forms.TextBox();
+      this.buttonLoadCharacter = new System.Windows.Forms.Button();
+      this.richTextBox1 = new System.Windows.Forms.RichTextBox();
       this.SuspendLayout();
       // 
       // buttonNewWarrior
@@ -58,6 +60,7 @@ namespace DiceGui
       this.textBox1.Location = new System.Drawing.Point(500, 255);
       this.textBox1.Multiline = true;
       this.textBox1.Name = "textBox1";
+      this.textBox1.ReadOnly = true;
       this.textBox1.Size = new System.Drawing.Size(288, 183);
       this.textBox1.TabIndex = 1;
       // 
@@ -139,11 +142,32 @@ namespace DiceGui
       this.textBoxName.Size = new System.Drawing.Size(100, 22);
       this.textBoxName.TabIndex = 10;
       // 
+      // buttonLoadCharacter
+      // 
+      this.buttonLoadCharacter.Location = new System.Drawing.Point(12, 151);
+      this.buttonLoadCharacter.Name = "buttonLoadCharacter";
+      this.buttonLoadCharacter.Size = new System.Drawing.Size(114, 48);
+      this.buttonLoadCharacter.TabIndex = 11;
+      this.buttonLoadCharacter.Text = "Load";
+      this.buttonLoadCharacter.UseVisualStyleBackColor = true;
+      this.buttonLoadCharacter.Click += new System.EventHandler(this.ButtonLoadCharacter_Click);
+      // 
+      // richTextBox1
+      // 
+      this.richTextBox1.Location = new System.Drawing.Point(160, 255);
+      this.richTextBox1.Name = "richTextBox1";
+      this.richTextBox1.ReadOnly = true;
+      this.richTextBox1.Size = new System.Drawing.Size(312, 183);
+      this.richTextBox1.TabIndex = 12;
+      this.richTextBox1.Text = "";
+      // 
       // CharacterSheet
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(800, 450);
+      this.Controls.Add(this.richTextBox1);
+      this.Controls.Add(this.buttonLoadCharacter);
       this.Controls.Add(this.textBoxName);
       this.Controls.Add(this.textBoxDexterity);
       this.Controls.Add(this.textBoxStrength);
@@ -175,5 +199,7 @@ namespace DiceGui
     private System.Windows.Forms.TextBox textBoxStrength;
     private System.Windows.Forms.TextBox textBoxDexterity;
     private System.Windows.Forms.TextBox textBoxName;
+    private System.Windows.Forms.Button buttonLoadCharacter;
+    private System.Windows.Forms.RichTextBox richTextBox1;
   }
 }

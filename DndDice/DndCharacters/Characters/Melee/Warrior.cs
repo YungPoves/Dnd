@@ -25,7 +25,7 @@ namespace Characters
 
     public override string ToString()
     {
-      return $"{base.ToString()}CLASS: {Constants.Warrior.CharacterClass}\nFACTION: {this.Faction}\n";
+      return $"{base.ToString()}CLASS: {Constants.Warrior.CharacterClass}\nFACTION: {this.Faction}";
     }
 
     #region Abilities

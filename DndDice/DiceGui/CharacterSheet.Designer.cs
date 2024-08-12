@@ -43,6 +43,7 @@ namespace DiceGui
       this.textBoxName = new System.Windows.Forms.TextBox();
       this.buttonLoadCharacter = new System.Windows.Forms.Button();
       this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+      this.buttonNewCharacter = new System.Windows.Forms.Button();
       this.SuspendLayout();
       // 
       // buttonNewWarrior
@@ -161,11 +162,22 @@ namespace DiceGui
       this.richTextBox1.TabIndex = 12;
       this.richTextBox1.Text = "";
       // 
+      // buttonNewCharacter
+      // 
+      this.buttonNewCharacter.Location = new System.Drawing.Point(272, 97);
+      this.buttonNewCharacter.Name = "buttonNewCharacter";
+      this.buttonNewCharacter.Size = new System.Drawing.Size(131, 48);
+      this.buttonNewCharacter.TabIndex = 13;
+      this.buttonNewCharacter.Text = "New character";
+      this.buttonNewCharacter.UseVisualStyleBackColor = true;
+      this.buttonNewCharacter.Click += new System.EventHandler(this.ButtonNewCharacter_Click);
+      // 
       // CharacterSheet
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(800, 450);
+      this.Controls.Add(this.buttonNewCharacter);
       this.Controls.Add(this.richTextBox1);
       this.Controls.Add(this.buttonLoadCharacter);
       this.Controls.Add(this.textBoxName);
@@ -201,5 +213,6 @@ namespace DiceGui
     private System.Windows.Forms.TextBox textBoxName;
     private System.Windows.Forms.Button buttonLoadCharacter;
     private System.Windows.Forms.RichTextBox richTextBox1;
+    private System.Windows.Forms.Button buttonNewCharacter;
   }
 }

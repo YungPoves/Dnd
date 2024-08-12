@@ -1,15 +1,6 @@
 ﻿using Characters;
 using DiceGui.ViewModels;
-using DndCharacters.Helpers;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DiceGui
@@ -49,9 +40,16 @@ namespace DiceGui
     private void ButtonLoadCharacter_Click(object sender, EventArgs e)
     {
       character = viewModel.LoadCharacter("Harald Stenhard");
+      this.textBoxStrength.Text = character.Strength.ToString();
     }
 
     private Character character;
     private readonly ViewModel viewModel;
+
+    private void ButtonNewCharacter_Click(object sender, EventArgs e)
+    {
+      CreateNewCharacter createNewCharacter = new CreateNewCharacter();
+      createNewCharacter.Show();
+    }
   }
 }

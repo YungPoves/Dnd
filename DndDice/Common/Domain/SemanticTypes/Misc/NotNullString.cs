@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace DndCharacters.Domain.SemanticTypes.Misc
+namespace Common.SemanticTypes
 {
   public abstract class NotNullString
   {

@@ -64,3 +64,4 @@ DndDice/DndUnitTests/bin/
 DndDice/DndUnitTests/obj/
 DndDice/packages/
 /.vs
+/DndDice/Common/obj

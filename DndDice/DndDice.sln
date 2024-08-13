@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DndCharacters", "DndCharact
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DndUnitTests", "DndUnitTests\DndUnitTests.csproj", "{21A7EE6A-B289-4A9C-9E61-1B43D3B64E44}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{5FA6A7D9-E23E-4109-82B9-B3C8E21D0F15}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{21A7EE6A-B289-4A9C-9E61-1B43D3B64E44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21A7EE6A-B289-4A9C-9E61-1B43D3B64E44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21A7EE6A-B289-4A9C-9E61-1B43D3B64E44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FA6A7D9-E23E-4109-82B9-B3C8E21D0F15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FA6A7D9-E23E-4109-82B9-B3C8E21D0F15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FA6A7D9-E23E-4109-82B9-B3C8E21D0F15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FA6A7D9-E23E-4109-82B9-B3C8E21D0F15}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

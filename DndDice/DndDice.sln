@@ -11,7 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DndCharacters", "DndCharact
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DndUnitTests", "DndUnitTests\DndUnitTests.csproj", "{21A7EE6A-B289-4A9C-9E61-1B43D3B64E44}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{5FA6A7D9-E23E-4109-82B9-B3C8E21D0F15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{5FA6A7D9-E23E-4109-82B9-B3C8E21D0F15}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{8FC0D0CF-69EB-4DF7-A2AE-BBB8157D5103}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{AE70EA96-3D14-4FFE-A91C-ADFA0B51212D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,9 +43,16 @@ Global
 		{5FA6A7D9-E23E-4109-82B9-B3C8E21D0F15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5FA6A7D9-E23E-4109-82B9-B3C8E21D0F15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5FA6A7D9-E23E-4109-82B9-B3C8E21D0F15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE70EA96-3D14-4FFE-A91C-ADFA0B51212D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE70EA96-3D14-4FFE-A91C-ADFA0B51212D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE70EA96-3D14-4FFE-A91C-ADFA0B51212D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE70EA96-3D14-4FFE-A91C-ADFA0B51212D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AE70EA96-3D14-4FFE-A91C-ADFA0B51212D} = {8FC0D0CF-69EB-4DF7-A2AE-BBB8157D5103}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4F72509A-D349-4CFA-891C-8C08FD0F1E6A}

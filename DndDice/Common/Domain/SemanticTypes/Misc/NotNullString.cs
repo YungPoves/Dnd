@@ -33,7 +33,7 @@ namespace Common.SemanticTypes
     }
     public static bool IsValid(string candidate, int maxLength)
     {
-      return IsValid(candidate, 1, MaxLength);
+      return IsValid(candidate, 1, maxLength);
     }
     public static bool IsValid(string candidate, int minLength, int maxLength)
     {

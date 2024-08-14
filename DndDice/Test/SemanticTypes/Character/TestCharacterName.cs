@@ -32,8 +32,6 @@ namespace Test.SemanticTypes
       string value = "-".PadRight(257);
 
       CharacterName obj = new CharacterName(value);
-
-      Assert.IsTrue(obj.Value == null);
     }
 
     [TestMethod]

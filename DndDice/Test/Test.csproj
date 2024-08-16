@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="SemanticTypes\Character\TestCharacterName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SemanticTypes\Character\TestCharacter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -9,24 +9,31 @@ namespace Test.SemanticTypes
     [TestMethod]
     public void CharacterWithStringName()
     {
-      Character character = new Character("value");
+      character = new Character("value");
 
       Assert.IsTrue(character.Name.Value.Equals("value"));
     }
 
     [TestMethod]
     public void CharacterWithAbilityScores()
-    {      
-      strength.Value = 20;
-      dexterity.Value = 12;
+    {
+      character = new Character(strength, dexterity, constitution, intelligence, wisdom, charisma);
 
-      Character character = new Character(strength, dexterity);
-
-      Assert.IsTrue(character.AbilityScores[0].Modifier() == 5);
-      Assert.IsTrue(character.AbilityScores[1].Modifier() == 1);
+      Assert.IsTrue(character.Strength.Modifier() == (12 - 10) / 2);
+      Assert.IsTrue(character.Dexterity.Modifier() == (18 - 10) / 2);
+      Assert.IsTrue(character.Constitution.Modifier() == (20 - 10) / 2);
+      Assert.IsTrue(character.Intelligence.Modifier() == (11 - 10) / 2);
+      Assert.IsTrue(character.Wisdon.Modifier() == (10 - 10) / 2);
+      Assert.IsTrue(character.Charisma.Modifier() == (13 - 10) / 2);
     }
 
-    private AbilityScore strength = new AbilityScore();
-    private AbilityScore dexterity = new AbilityScore();
+    Character character;
+
+    private readonly AbilityScore strength = new AbilityScore(12);
+    private readonly AbilityScore dexterity = new AbilityScore(18);
+    private readonly AbilityScore constitution = new AbilityScore(20);
+    private readonly AbilityScore intelligence = new AbilityScore(11);
+    private readonly AbilityScore wisdom = new AbilityScore(10);
+    private readonly AbilityScore charisma = new AbilityScore(13);
   }
 }

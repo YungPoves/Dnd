@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Common.SemanticTypes
+﻿namespace Common.SemanticTypes
 {
-  public class AbilityScore
+  public class AbilityScore : NotNullNumeric
   {
-    public int Value { get; set; }
+    public AbilityScore(int value) : base(value)
+    {
+      base.Value = value;
+    }
 
     public int Modifier()
     {

@@ -8,17 +8,24 @@ namespace Common.SemanticTypes
     {
       this.Name = new CharacterName(characterName);
     }
-    public Character(CharacterStats strength, CharacterStats dexterity)
+    public Character(AbilityScore strength, AbilityScore dexterity, AbilityScore constitution, AbilityScore intelligence, AbilityScore wisdon, AbilityScore charisma)
     {
-      this.AbilityScores = new List<CharacterStats>
-      {
-        strength,
-        dexterity
-      };
+      this.Strength = strength;
+      this.Dexterity = dexterity;
+      this.Constitution = constitution;
+      this.Intelligence = intelligence;
+      this.Wisdon = wisdon;
+      this.Charisma = charisma;
     }
 
     private CharacterName characterName;
-    private List<CharacterStats> abilityScores;
+    private AbilityScore strength;
+    private AbilityScore dexterity;
+    private AbilityScore constitution;
+    private AbilityScore intelligence;
+    private AbilityScore wisdon;
+    private AbilityScore charisma;
+    
     private string characterRace;
     private string characterclass;
 
@@ -27,8 +34,13 @@ namespace Common.SemanticTypes
       get => characterName;
       set => characterName = value; 
     }
-    public List<CharacterStats> AbilityScores { get => abilityScores; set => abilityScores = value; }
-
+    public AbilityScore Strength { get => strength; set => strength = value; }
+    public AbilityScore Dexterity { get => dexterity; set => dexterity = value; }
+    public AbilityScore Constitution { get => constitution; set => constitution = value; }
+    public AbilityScore Intelligence { get => intelligence; set => intelligence = value; }
+    public AbilityScore Wisdon { get => wisdon; set => wisdon = value; }
+    public AbilityScore Charisma { get => charisma; set => charisma = value; }
+    
     public string Race { get => characterRace; set => characterRace = value; }
     public string Characterclass { get => characterclass; set => characterclass = value; }
   }

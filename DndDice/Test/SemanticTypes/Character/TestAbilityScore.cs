@@ -7,12 +7,11 @@ namespace Test.SemanticTypes
   public class TestAbilityScore
   {
     [TestMethod]
-    public void StrengthModifier()
+    public void AbilityScoreFromInt() 
     {
-      AbilityScore strength = new AbilityScore();
-      strength.Value = 18;
+      AbilityScore strength = new AbilityScore(17);
 
-      Assert.IsTrue(strength.Modifier() == (18 - 10) / 2);
+      Assert.IsTrue(strength.Modifier() == 3);
     }
   }
 }

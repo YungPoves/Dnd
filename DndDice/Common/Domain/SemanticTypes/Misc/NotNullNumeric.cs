@@ -34,10 +34,20 @@ namespace Common.SemanticTypes
     #endregion
 
     [DebuggerStepThrough]
-    protected NotNullNumeric(int? value) 
+    protected NotNullNumeric(int value) : this(value, 1)
+    {
+    }
+
+    [DebuggerStepThrough]
+    protected NotNullNumeric(int value, int minValue)
     {
       if (value == null)
         throw new ArgumentNullException(nameof(value));
+
+      if (value < minValue)
+        throw new ArgumentException($"Value too low: {nameof(value)}");
+
+      Value = value;
     }
 
     public static bool IsValid(int? candidate)
@@ -55,8 +65,6 @@ namespace Common.SemanticTypes
       return true;
     }
 
-    public int Value { get; protected set; }
-
     #region Overrides
     public override bool Equals(object obj)
     {
@@ -73,6 +81,7 @@ namespace Common.SemanticTypes
     }
     #endregion
 
+    public int Value { get; protected set; }
 
     private const int MinValue = 0;
   }

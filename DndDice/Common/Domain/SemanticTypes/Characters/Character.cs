@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Common.SemanticTypes
+﻿namespace Common.SemanticTypes
 {
   public class Character
   {
@@ -17,6 +15,10 @@ namespace Common.SemanticTypes
       this.Wisdon = wisdon;
       this.Charisma = charisma;
     }
+    public Character(CharacterHitpoints hitpoints)
+    {
+      this.Hitpoints = hitpoints;
+    }
 
     private CharacterName characterName;
     private AbilityScore strength;
@@ -25,6 +27,8 @@ namespace Common.SemanticTypes
     private AbilityScore intelligence;
     private AbilityScore wisdon;
     private AbilityScore charisma;
+
+    private CharacterHitpoints hitpoints;
     
     private string characterRace;
     private string characterclass;
@@ -41,6 +45,8 @@ namespace Common.SemanticTypes
     public AbilityScore Wisdon { get => wisdon; set => wisdon = value; }
     public AbilityScore Charisma { get => charisma; set => charisma = value; }
     
+    public CharacterHitpoints Hitpoints { get => hitpoints; set => hitpoints = value; }
+
     public string Race { get => characterRace; set => characterRace = value; }
     public string Characterclass { get => characterclass; set => characterclass = value; }
   }

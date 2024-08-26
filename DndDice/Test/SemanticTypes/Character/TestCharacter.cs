@@ -27,6 +27,14 @@ namespace Test.SemanticTypes
       Assert.IsTrue(character.Charisma.Modifier() == (13 - 10) / 2);
     }
 
+    [TestMethod]
+    public void CharacterWithHitPoints()
+    {
+      character = new Character(hitpoints);
+
+      Assert.IsTrue(character.Hitpoints == 100);
+    }
+
     Character character;
 
     private readonly AbilityScore strength = new AbilityScore(12);
@@ -35,5 +43,6 @@ namespace Test.SemanticTypes
     private readonly AbilityScore intelligence = new AbilityScore(11);
     private readonly AbilityScore wisdom = new AbilityScore(10);
     private readonly AbilityScore charisma = new AbilityScore(13);
+    private readonly CharacterHitpoints hitpoints = new CharacterHitpoints(100);
   }
 }

@@ -23,7 +23,7 @@ namespace Test.SemanticTypes
       Assert.IsTrue(character.Dexterity.Modifier() == (18 - 10) / 2);
       Assert.IsTrue(character.Constitution.Modifier() == (20 - 10) / 2);
       Assert.IsTrue(character.Intelligence.Modifier() == (11 - 10) / 2);
-      Assert.IsTrue(character.Wisdon.Modifier() == (10 - 10) / 2);
+      Assert.IsTrue(character.Wisdom.Modifier() == (10 - 10) / 2);
       Assert.IsTrue(character.Charisma.Modifier() == (13 - 10) / 2);
     }
 
@@ -33,6 +33,17 @@ namespace Test.SemanticTypes
       character = new Character(hitpoints);
 
       Assert.IsTrue(character.Hitpoints == 100);
+    }
+
+    [TestMethod]
+    public void CharacterWithArmorClass()
+    {
+      character = new Character(strength, dexterity, constitution, intelligence, wisdom, charisma)
+      {
+        ArmorClass = new ArmorClass(15)
+      };
+
+      Assert.IsTrue(character.ArmorClass.Value == 15);
     }
 
     Character character;

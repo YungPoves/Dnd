@@ -35,6 +35,8 @@
 
     private CharacterProficiency proficiency;
 
+    private CharacterLevel level;
+
     private string characterRace;
     private string characterclass;
 
@@ -56,6 +58,8 @@
     public ArmorClass ArmorClass { get => armorClass; set => armorClass = value; }
 
     public CharacterProficiency Proficiency { get => proficiency; set => proficiency = value; }
+
+    public CharacterLevel Level { get => level; set => level = value; }
 
     public string Race { get => characterRace; set => characterRace = value; }
     public string Characterclass { get => characterclass; set => characterclass = value; }

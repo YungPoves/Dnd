@@ -4,6 +4,7 @@
   {
     public CharacterProficiency(int value) : base(value)
     {
+      base.Value = value;
     }
   }
 }

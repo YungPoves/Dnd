@@ -4,7 +4,7 @@
   {
     public AbilityScore(int value) : base(value)
     {
-      base.Value = value;
+      //base.Value = value;
     }
 
     public int Modifier()

@@ -46,6 +46,17 @@ namespace Test.SemanticTypes
       Assert.IsTrue(character.ArmorClass.Value == 15);
     }
 
+    [TestMethod]
+    public void CharacterWithLevel()
+    {
+      character = new Character(strength, dexterity, constitution, intelligence, wisdom, charisma)
+      {
+        Level = new CharacterLevel(5)
+      };
+
+      Assert.IsTrue(character.Level.Value == 5);
+    }
+
     Character character;
 
     private readonly AbilityScore strength = new AbilityScore(12);

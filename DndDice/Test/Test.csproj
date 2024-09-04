@@ -53,6 +53,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SemanticTypes\Character\TestCharacter.cs" />
     <Compile Include="SemanticTypes\Character\TestAbilityScore.cs" />
+    <Compile Include="SemanticTypes\Character\TestCharacterClassTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

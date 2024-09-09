@@ -19,12 +19,12 @@ namespace Test.SemanticTypes
     {
       character = new Common.SemanticTypes.Character(strength, dexterity, constitution, intelligence, wisdom, charisma);
 
-      Assert.IsTrue(character.Strength.Modifier() == (12 - 10) / 2);
-      Assert.IsTrue(character.Dexterity.Modifier() == (18 - 10) / 2);
-      Assert.IsTrue(character.Constitution.Modifier() == (20 - 10) / 2);
-      Assert.IsTrue(character.Intelligence.Modifier() == (11 - 10) / 2);
-      Assert.IsTrue(character.Wisdom.Modifier() == (10 - 10) / 2);
-      Assert.IsTrue(character.Charisma.Modifier() == (13 - 10) / 2);
+      Assert.IsTrue(character.Strength.GetModifier() == (12 - 10) / 2);
+      Assert.IsTrue(character.Dexterity.GetModifier() == (18 - 10) / 2);
+      Assert.IsTrue(character.Constitution.GetModifier() == (20 - 10) / 2);
+      Assert.IsTrue(character.Intelligence.GetModifier() == (11 - 10) / 2);
+      Assert.IsTrue(character.Wisdom.GetModifier() == (10 - 10) / 2);
+      Assert.IsTrue(character.Charisma.GetModifier() == (13 - 10) / 2);
     }
 
     [TestMethod]

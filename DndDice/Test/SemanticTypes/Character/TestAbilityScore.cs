@@ -11,7 +11,7 @@ namespace Test.SemanticTypes
     {
       AbilityScore strength = new AbilityScore(17);
 
-      Assert.IsTrue(strength.Modifier() == 3);
+      Assert.IsTrue(strength.GetModifier() == 3);
     }
   }
 }

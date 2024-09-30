@@ -9,10 +9,15 @@ namespace Common.Domain.SemanticTypes.Characters
     {
     }
 
-    public TestCharacterClass(int strength, int dexterity)
+    public TestCharacterClass(int hitpoints, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma)
     {
+      this.HitPoints = new CharacterHitpoints(hitpoints);
       this.Strength = new AbilityScore(strength);
       this.Dexterity = new AbilityScore(dexterity);
+      this.Constitution = new AbilityScore(constitution);
+      this.Intelligence = new AbilityScore(intelligence);
+      this.Wisdom = new AbilityScore(wisdom);
+      this.Charisma = new AbilityScore(charisma);
     }
 
     public CharacterHitpoints HitPoints

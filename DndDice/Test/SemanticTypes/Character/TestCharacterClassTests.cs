@@ -21,12 +21,21 @@ namespace Test.SemanticTypes.Character
     [TestMethod]
     public void CharacterWithAbilityScore()
     {
-      TestCharacterClass testCharacter = new TestCharacterClass(8, 14);
+      TestCharacterClass testCharacter = new TestCharacterClass(30, 8, 14, 15, 20, 19, 11);
 
+      Assert.IsTrue(testCharacter.HitPoints == 30);
       Assert.IsTrue(testCharacter.Strength == 8);
       Assert.IsTrue(testCharacter.Dexterity == 14);
+      Assert.IsTrue(testCharacter.Constitution == 15);
+      Assert.IsTrue(testCharacter.Intelligence == 20);
+      Assert.IsTrue(testCharacter.Wisdom == 19);
+      Assert.IsTrue(testCharacter.Charisma == 11);
       Assert.IsTrue(testCharacter.Strength.GetModifier() == (8 - 10) / 2);
       Assert.IsTrue(testCharacter.Dexterity.GetModifier() == (14 - 10) / 2);
+      Assert.IsTrue(testCharacter.Constitution.GetModifier() == (15 - 10) / 2);
+      Assert.IsTrue(testCharacter.Intelligence.GetModifier() == (20 - 10) / 2);
+      Assert.IsTrue(testCharacter.Wisdom.GetModifier() == (19 - 10) / 2);
+      Assert.IsTrue(testCharacter.Charisma.GetModifier() == (11 - 10) / 2);
     }
 
     [TestMethod]

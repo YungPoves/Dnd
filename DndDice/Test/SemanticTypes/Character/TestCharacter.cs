@@ -32,7 +32,7 @@ namespace Test.SemanticTypes
     {
       character = new Common.SemanticTypes.Character(hitpoints);
 
-      Assert.IsTrue(character.Hitpoints == 100);
+      Assert.IsTrue(character.HitPoints == 100);
     }
 
     [TestMethod]
